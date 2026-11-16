@@ -4,7 +4,7 @@
    前端改版时把 VERSION 加一号，activate 会自动清掉旧缓存。 */
 var VERSION = 'qiubao-gh-v2';
 var START = './index.html';
-var SHELL = [START, './app.js', './manifest.webmanifest', './icon-192.png', './icon.png'];
+var SHELL = [START, './app.js', './news.json', './manifest.webmanifest', './icon-192.png', './icon.png'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(
