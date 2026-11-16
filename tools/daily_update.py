@@ -12,15 +12,16 @@
 1. 调抓取管线，生成 news.json 并注入 index.html
 2. 重建自包含离线单文件 offline.html
 3. 跑每日闸门（只读）：今天已发布过就拒绝，除非 --force
-4. 把日期戳写进 state/last-publish.json
-5. git add + commit（推送由 --push 决定）
-6. git push origin main（pre-push 钩子会再核一次闸门）
+4. git add + commit（日期戳由 .githooks/pre-commit 自动盖）
+5. git push origin main（pre-push 钩子会再核一次闸门）
 
 关于顺序的两个细节
 ------------------
 * 闸门在推送之前：先确认「今天还没发过」，再允许把新数据推上去。
-* 推送失败时回滚日期戳：否则「写了戳但没推上去」会让当天无法重试。
-  回滚后重跑本脚本即可：提交内容一致，git push 会把已有提交推上去。
+* 推送失败不用回滚日期戳：日期戳是**提交**时盖的，不是推送时写的。
+  提交里带着今天的戳，但远端还没收到这次提交 —— 下次重推会带上这个提交，
+  远端历史里才第一次出现今天的戳。pre-push 判据看的是**远端历史**，
+  所以推送失败后当天仍然可以重试。
 """
 import argparse
 import io
@@ -47,24 +48,23 @@ def sh(args, cwd=ROOT, check=True):
 
 
 def fetch():
-    print("[1/6] 抓取资讯、集锦、赛果与即将开赛 ...")
+    print("[1/5] 抓取资讯、集锦、赛果与即将开赛 ...")
     import update_news
     update_news.main()
     print("      抓取完成")
 
 
 def rebuild_offline():
-    print("[2/6] 重建自包含离线单文件 ...")
+    print("[2/5] 重建自包含离线单文件 ...")
     import build_offline
     build_offline.build()
 
 
 def gate(force):
-    """只读检查今天的发布资格。不写日期戳。"""
-    print("[3/6] 检查每日闸门 ...")
-    allowed, reason, last = daily_gate.check(force=force)
+    """只读检查今天的发布资格。判定与 pre-push 钩子完全一致。"""
+    print("[3/5] 检查每日闸门 ...")
+    allowed, reason = daily_gate.check_push(force=force)
     print("      %s（%s）" % ("允许发布" if allowed else "拒绝发布", reason))
-    print("      上次发布日期：%s" % (last or "（无）"))
     if not allowed:
         raise SystemExit(
             "今天已经发布过一次了。强制重发请加 --force "
@@ -72,22 +72,8 @@ def gate(force):
     return reason
 
 
-def write_stamp(force):
-    """写入今天的日期戳。返回写之前的旧状态（用于失败回滚）。"""
-    backup = daily_gate.read_state()
-    daily_gate.stamp(force=force, extra={
-        "note": "每次发布成功后写入北京日期（UTC+8）。pre-push 钩子据此拦截当天第二次推送。",
-    })
-    return backup
-
-
-def rollback_stamp(backup):
-    daily_gate.write_state(backup)
-    print("      日期戳已回滚，今天仍可重试。")
-
-
 def commit(message):
-    print("[4/6] 提交改动 ...")
+    print("[4/5] 提交改动 ...")
     sh(["git", "add", "-A"])
     # 没有改动就别硬造一个空提交
     st = sh(["git", "status", "--porcelain"], check=False)
@@ -97,12 +83,23 @@ def commit(message):
     sh(["git", "commit", "-m", message])
     sha = sh(["git", "rev-parse", "--short", "HEAD"]).stdout.strip()
     print("      已提交 %s：%s" % (sha, message))
+    print("      （日期戳已由 pre-commit 钩子自动盖上）")
     return True
 
 
-def push():
-    print("[5/6] 推送到 origin/main ...")
-    p = sh(["git", "push", "origin", "main"], check=False)
+def push(force=False):
+    """推送到 origin/main。
+
+    --force 时必须真的加 --no-verify：只让脚本内的 gate() 放行没用，
+    pre-push 钩子是 git 在 push 阶段独立调用的，仍会按远端历史拦下来。
+    """
+    print("[5/5] 推送到 origin/main ...")
+    cmd = ["git", "push"]
+    if force:
+        cmd.append("--no-verify")
+        print("      （--force：本次跳过 pre-push 闸门）")
+    cmd += ["origin", "main"]
+    p = sh(cmd, check=False)
     if p.returncode != 0:
         print((p.stdout or "") + (p.stderr or ""))
         return False
@@ -122,7 +119,6 @@ def main():
         fetch()
     rebuild_offline()
     gate(args.force)
-    backup = write_stamp(args.force)
 
     stamp = ""
     try:
@@ -133,14 +129,14 @@ def main():
     commit("更新：%s" % (stamp or daily_gate.beijing_today()))
 
     if args.push:
-        if not push():
-            rollback_stamp(backup)
+        if not push(force=args.force):
             raise SystemExit(
                 "推送失败。可能是网络问题，或被每日闸门的 pre-push 钩子拦住了。"
-                "修好之后重新运行本脚本即可（日期戳已回滚，不算今天的发布）。")
+                "修好之后重新运行本脚本即可 —— 提交还在本地，"
+                "远端历史里没有今天的戳，所以今天仍然可以重试。")
     else:
-        print("[5/6] 未指定 --push，跳过推送（需要发布请加 --push）")
-    print("[6/6] 完成。")
+        print("[5/5] 未指定 --push，跳过推送（需要发布请加 --push）")
+    print("完成。")
 
 
 if __name__ == "__main__":

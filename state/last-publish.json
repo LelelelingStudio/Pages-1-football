@@ -1,5 +1,5 @@
 {
-  "date": "",
-  "note": "每次发布成功后写入北京日期（UTC+8）。pre-push 钩子据此拦截当天第二次推送。本仓库无 workflow，纯客户端闸门。",
-  "updated_at": ""
+  "date": "2026-11-15",
+  "note": "每次提交由 .githooks/pre-commit 自动盖上北京日期（UTC+8）。pre-push 钩子据此判断当天是否已发布过。",
+  "updated_at": "2026-11-16T17:49:11"
 }

@@ -1,0 +1,29 @@
+#!/bin/sh
+# post-push 钩子：推送成功后记录「本机今天已推送」。
+#
+# 这个记录放在 .git/wb-publish-state.json，不进版本库、不弄脏工作区。
+# 作用是补上 pre-push 判据里「远端历史还没同步到本地」的场景
+# （比如刚 clone 完还没 fetch 就想再推一次）。
+#
+# 只处理 main/master；推别的分支不记录。
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+
+case "$BRANCH" in
+  main|master) ;;
+  *) exit 0 ;;
+esac
+
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null || echo ".")
+CHECK="$ROOT/tools/daily_gate.py"
+
+[ -f "$CHECK" ] || exit 0
+
+for c in python python3 py; do
+  if command -v "$c" >/dev/null 2>&1; then
+    "$c" "$CHECK" --mark-published >/dev/null 2>&1
+    exit 0
+  fi
+done
+
+exit 0

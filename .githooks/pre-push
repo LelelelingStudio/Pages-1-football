@@ -5,8 +5,12 @@
 # 只能靠本地钩子实现。GitHub Desktop 会执行 git 钩子，钩子失败会阻止推送。
 #
 # 判定逻辑交给 tools/daily_gate.py --check-push：
-# 它比对 origin/main 上的日期戳与本次提交的日期戳（北京时间），
-# 命中「今天已经发过」就返回非 0，推送被拦下。
+#   1. 查远端 origin/main 最近提交的日期戳 —— 只要有今天的戳就拦
+#      （跨机器、跨工具都成立：David 今天推过，你今天就推不了）
+#   2. 查本机推送记录 .git/wb-publish-state.json —— 远端还没同步到本地时的兜底
+#
+# 戳是怎么来的：每次提交由 .githooks/pre-commit 自动盖上，
+# 所以不管用 GitHub Desktop 还是命令行，戳都在。
 #
 # 绕过方式（明知故犯时才用）：
 #     git push --no-verify

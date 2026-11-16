@@ -4,8 +4,27 @@
 纯静态站点，**GitHub Pages 分支部署**，没有 workflow，不需要 token。
 
 - 仓库：`https://github.com/LelelelingStudio/Pages-1-football`
-- 线上地址：`https://football-pages.leleleling.site`
+- **线上地址：`https://football-pages.leleleling.site`（已上线，可直接访问）**
 - 默认分支：`main`，站点入口 = 仓库根目录的 `index.html`
+- GitHub Pages：source = **Deploy from a branch** / `main` / **/ (root)**；
+  自定义域名 = `football-pages.leleleling.site`（都已配置好，状态 built）
+
+---
+
+## ⚡ 最快上手：怎么更新到这个网址
+
+网站已经在 `https://football-pages.leleleling.site` 上线了。
+**更新 = 把新数据 push 到 `main`，Pages 会自动重建，1-3 分钟后线上就是新内容。**
+不用手动上传、不用进 Pages 后台、不用碰 DNS。
+
+日常只有两步：
+
+1. **抓取并生成新数据**：双击仓库根目录的 `更新数据.bat`（macOS/Linux 跑 `./更新数据.sh`）
+2. **等 1-3 分钟**，刷新 `https://football-pages.leleleling.site` 即可
+
+脚本会自动完成：抓取 → 重建离线版 → 检查闸门 → commit → push。
+如果今天已经推过一次，闸门会拦下，属正常（一天一次规则，见下文）。
+详细步骤与 GitHub Desktop 手动方式见 [第二节](#二每天怎么更新日常操作)。
 
 ---
 
@@ -52,23 +71,35 @@ GitHub Desktop → **File → Clone repository** → 选 `LelelelingStudio / Pag
 
 ### 4. 装上「一天只推一次」的钩子（重要，只做一次）
 
-在 **GitHub Desktop 的菜单 → Repository → Settings → Repository settings** 里没有这项，
-用命令行做一次即可（Windows 上用 GitHub Desktop 自带的 Git Bash，
-或任意装了 Git 的终端）：
+**换机器、重新 clone 之后，都要重新跑这一步。**
+
+Windows 双击仓库根目录的 **`首次配置.bat`**；
+macOS / Linux 执行 `./首次配置.sh`。
+
+它做了三件事：
+
+1. 设置 `core.hooksPath = .githooks` —— 让 Git 知道钩子目录在哪
+2. 检查远端地址并 `fetch` 一次
+3. 跑一次闸门自检
+
+> `core.hooksPath` 是**本地配置**，不会随仓库同步到别的电脑。
+> 这就是为什么每个新环境都要跑一次。
+
+手动做也行（Windows 上用 GitHub Desktop 自带的 Git Bash）：
 
 ```bash
 cd <仓库本地目录>
 git config core.hooksPath .githooks
+git fetch origin
 ```
-
-这行命令的意思是：把仓库里的 `.githooks/` 目录设为 Git 钩子目录。
-`pre-push` 钩子就会在每次推送前自动检查「今天是不是已经发过了」。
 
 验证装好了：
 
 ```bash
 python tools/daily_gate.py --check-push
 ```
+
+输出「今天还没有发布过」就说明闸门在正常工作。
 
 ### 5. 开启 GitHub Pages（仓库所有者 / 有 Write 权限的人做）
 
@@ -81,6 +112,10 @@ python tools/daily_gate.py --check-push
 | Folder | **/ (root)** |
 
 保存后等 1-3 分钟，站点会在 `https://lelelelingstudio.github.io/Pages-1-football/` 可访问。
+
+> **为什么不用 Actions？** 免费额度有限，而且 Actions 部署会消耗运行分钟数。
+> 分支部署每次推送触发一次构建，官方软限制是每小时 10 次 ——
+> 本项目每天只推一次，完全够用。
 
 ### 6. 设置自定义域名
 
@@ -136,12 +171,27 @@ macOS / Linux 执行 `./更新数据.sh`。
 **本仓库每天只允许推送一次新数据。** 这是用户明确要求的硬规则，
 目的是让 Pages 的构建额度用得省一点（分支部署每小时 10 次构建的软限制）。
 
-当天第二次推送会被 pre-push 钩子拦下，提示长这样：
+#### 闸门是怎么工作的
+
+三个钩子配合，**不依赖任何特定脚本，也不依赖特定推送工具**：
+
+| 钩子 | 时机 | 做什么 |
+| --- | --- | --- |
+| `pre-commit` | 每次提交前 | 自动给 `state/last-publish.json` 盖上**今天（北京）的日期戳**，并 `git add`，让戳随提交进入 git 历史 |
+| `pre-push` | 每次推送前 | 查远端 `origin/main` 的提交历史，只要里面有今天的戳 → 拒绝这次推送 |
+| `post-push` | 推送成功后 | 在 `.git/` 里记一笔「本机今天推过」，用于远端历史还没同步到本地时的兜底 |
+
+关键点是：**戳是提交时自动盖的**。所以不管用 GitHub Desktop 点「Commit」、
+命令行 `git commit`、还是 IDE 里提交，戳都会在。
+判定读的是**远端提交历史**，所以跨机器、跨工具都成立 ——
+David 今天推过了，你今天在自己电脑上再推，会被拦下。
+
+当天第二次推送会被拦下，提示长这样：
 
 ```
 ==========================================
  今天的新闻已经发布过一次了
- 远端 origin/main 已经发布过 2026-11-16 的数据
+ 远端 origin/main 已有一次 2026-11-16 的发布（提交 5ba2231：D 首次发布）
  本仓库每天只允许推送一次新数据。
  如需强制重发：git push --no-verify
 ==========================================
@@ -162,6 +212,8 @@ git push --no-verify
 - 真想要服务端强制（谁都绕不过），唯一的办法是加回 GitHub Actions
   在 workflow 里做判断 —— 但那样会消耗免费额度，本项目按要求不这么做。
 - 按正常流程走（同一台机器 + 装了钩子 + 不加 `--no-verify`），拦得住。
+- 即使钩子被绕过，**远端提交历史里仍然会留下当天的日期戳**，
+  下次正常推送时会被拦下 —— 所以绕过只对当次有效，不是彻底失效。
 
 ---
 
@@ -178,9 +230,11 @@ football-daily-public/          ← 仓库根 = 网站根（Pages 直接发布�
 ├── .nojekyll                   ← 让 Pages 不要走 Jekyll 处理
 ├── config.json                 ← 公开配置（owner/repo/域名），无密钥
 ├── state/
-│   └── last-publish.json       ← 上次发布的北京日期戳，闸门靠它判断
+│   └── last-publish.json       ← 发布日期戳（每次提交由 pre-commit 自动盖）
 ├── .githooks/
-│   └── pre-push                ← 每日一次的闸门
+│   ├── pre-commit              ← 提交前自动盖上今天的北京日期戳
+│   ├── pre-push                ← 推送前检查：远端历史里有没有今天的戳
+│   └── post-push               ← 推送成功后记录本机发布日期
 ├── tools/                      ← 抓取与构建脚本（不入网站产物）
 │   ├── paths.py                ← 路径分层：SITE_ROOT / TOOLS_DIR
 │   ├── update_news.py          ← 主抓取管线
@@ -191,6 +245,7 @@ football-daily-public/          ← 仓库根 = 网站根（Pages 直接发布�
 │   ├── build_offline.py        ← 重建 offline.html
 │   ├── daily_gate.py           ← 每日闸门（判定逻辑在这里）
 │   └── daily_update.py         ← 一键流程
+├── 首次配置.bat / 首次配置.sh   ← 换机器后跑一次（装钩子）
 ├── 更新数据.bat / 更新数据.sh   ← 一键更新入口
 └── .github/                    ← 已删除（本项目不用 Actions）
 ```

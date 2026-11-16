@@ -10,7 +10,7 @@ set -e
 cd "$(dirname "$0")"
 
 echo ""
-echo " [1/2] 查找 Python ..."
+echo " [1/3] 查找 Python ..."
 PY=""
 for c in python3 python; do
   if command -v "$c" >/dev/null 2>&1; then PY="$c"; break; fi
@@ -23,7 +23,19 @@ fi
 echo "     使用：$PY"
 
 echo ""
-echo " [2/2] 开始每日更新（抓取 - 构建 - 闸门 - 提交 - 推送）..."
+echo " [2/3] 检查钩子配置 ..."
+# core.hooksPath 是本地配置，换机器后需要重设，这里自动补上
+HOOKS=$(git config --get core.hooksPath 2>/dev/null || echo "")
+if [ "$HOOKS" != ".githooks" ]; then
+  echo "     未配置，正在设置 core.hooksPath = .githooks ..."
+  git config core.hooksPath .githooks
+  echo "     已设置。每日一次的闸门从现在起生效。"
+else
+  echo "     已配置 ✓"
+fi
+
+echo ""
+echo " [3/3] 开始每日更新（抓取 - 构建 - 闸门 - 提交 - 推送）..."
 echo ""
 if "$PY" tools/daily_update.py --push; then
   echo ""
