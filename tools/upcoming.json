@@ -1,1780 +1,9 @@
 {
- "updated_at": "2026-11-15 18:17:07",
+ "updated_at": "2026-11-16 20:14:09",
  "winrate_found": 0,
- "estimate_found": 18,
+ "estimate_found": 28,
  "estimate_method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
  "fixtures": [
-  {
-   "id": "fx_1949614",
-   "league": "欧国联",
-   "round": "欧国联C2组第6轮",
-   "home": "塞浦路斯",
-   "away": "黑山",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_v2_3277.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_v2_3274.png"
-   ],
-   "kickoff": "2026-11-15 22:00",
-   "date": "11-15",
-   "time": "22:00",
-   "weekday": "日",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949614v.htm",
-   "analysis": [],
-   "winrate": null,
-   "estimate": {
-    "home": 34.7,
-    "draw": 28.6,
-    "away": 36.7,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949614v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-15/1949614.htm",
-    "lambda_home": 1.114,
-    "lambda_away": 1.156,
-    "mu_home": 1.091,
-    "mu_away": 1.182,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 1.33,
-    "home_ga": 0.67,
-    "away_gf": 1.67,
-    "away_ga": 1.0,
-    "base": 1.136,
-    "shrink": 0.5,
-    "attack_home": 1.087,
-    "defence_home": 0.793,
-    "attack_away": 1.233,
-    "defence_away": 0.94,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "塞浦路斯",
-      "score": "2:1",
-      "away": "拉脱维亚",
-      "venue": "主",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "塞浦路斯",
-      "score": "2:0",
-      "away": "亚美尼亚",
-      "venue": "主",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "拉脱维亚",
-      "score": "0:0",
-      "away": "塞浦路斯",
-      "venue": "客",
-      "gf": 0,
-      "ga": 0
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "黑山",
-      "score": "2:1",
-      "away": "塞浦路斯",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-06-07",
-      "league": "友谊赛",
-      "home": "列支敦士登",
-      "score": "0:2",
-      "away": "塞浦路斯",
-      "venue": "客",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-06-05",
-      "league": "友谊赛",
-      "home": "斯洛文尼亚",
-      "score": "1:1",
-      "away": "塞浦路斯",
-      "venue": "客",
-      "gf": 1,
-      "ga": 1
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "黑山",
-      "score": "0:0",
-      "away": "亚美尼亚",
-      "venue": "主",
-      "gf": 0,
-      "ga": 0
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "拉脱维亚",
-      "score": "1:2",
-      "away": "黑山",
-      "venue": "客",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "亚美尼亚",
-      "score": "2:3",
-      "away": "黑山",
-      "venue": "客",
-      "gf": 3,
-      "ga": 2
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "黑山",
-      "score": "2:1",
-      "away": "塞浦路斯",
-      "venue": "主",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-06-06",
-      "league": "友谊赛",
-      "home": "斯洛伐克",
-      "score": "2:2",
-      "away": "黑山",
-      "venue": "客",
-      "gf": 2,
-      "ga": 2
-     },
-     {
-      "date": "26-06-02",
-      "league": "友谊赛",
-      "home": "保加利亚",
-      "score": "0:1",
-      "away": "黑山",
-      "venue": "客",
-      "gf": 1,
-      "ga": 0
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:07",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "塞浦路斯",
-      "games": "5",
-      "wdl": "2/2/1",
-      "goal": "6/4",
-      "point": "8"
-     },
-     {
-      "team": "黑山",
-      "games": "5",
-      "wdl": "4/1/0",
-      "goal": "9/5",
-      "point": "13"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home_team": "黑山",
-      "score": "2:1",
-      "visit_team": "塞浦路斯"
-     },
-     {
-      "date": "20-11-18",
-      "league": "欧国联",
-      "home_team": "黑山",
-      "score": "4:0",
-      "visit_team": "塞浦路斯"
-     },
-     {
-      "date": "20-09-05",
-      "league": "欧国联",
-      "home_team": "塞浦路斯",
-      "score": "0:2",
-      "visit_team": "黑山"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
-  {
-   "id": "fx_1949749",
-   "league": "欧国联",
-   "round": "欧国联C2组第6轮",
-   "home": "拉脱维亚",
-   "away": "亚美尼亚",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_3280.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_3266.png"
-   ],
-   "kickoff": "2026-11-15 22:00",
-   "date": "11-15",
-   "time": "22:00",
-   "weekday": "日",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949749v.htm",
-   "analysis": [],
-   "winrate": null,
-   "estimate": {
-    "home": 33.7,
-    "draw": 32.3,
-    "away": 34.0,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949749v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-15/1949749.htm",
-    "lambda_home": 0.924,
-    "lambda_away": 0.931,
-    "mu_home": 1.091,
-    "mu_away": 0.818,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 0.5,
-    "home_ga": 1.17,
-    "away_gf": 1.0,
-    "away_ga": 1.17,
-    "base": 0.955,
-    "shrink": 0.5,
-    "attack_home": 0.762,
-    "defence_home": 1.111,
-    "attack_away": 1.024,
-    "defence_away": 1.111,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "塞浦路斯",
-      "score": "2:1",
-      "away": "拉脱维亚",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "拉脱维亚",
-      "score": "1:2",
-      "away": "黑山",
-      "venue": "主",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "拉脱维亚",
-      "score": "0:0",
-      "away": "塞浦路斯",
-      "venue": "主",
-      "gf": 0,
-      "ga": 0
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "亚美尼亚",
-      "score": "2:0",
-      "away": "拉脱维亚",
-      "venue": "客",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-06-09",
-      "league": "友谊赛",
-      "home": "拉脱维亚",
-      "score": "0:1",
-      "away": "法罗群岛",
-      "venue": "主",
-      "gf": 0,
-      "ga": 1
-     },
-     {
-      "date": "26-04-01",
-      "league": "欧国联",
-      "home": "拉脱维亚",
-      "score": "1:0",
-      "away": "直布罗陀",
-      "venue": "主",
-      "gf": 1,
-      "ga": 0
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "黑山",
-      "score": "0:0",
-      "away": "亚美尼亚",
-      "venue": "客",
-      "gf": 0,
-      "ga": 0
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "塞浦路斯",
-      "score": "2:0",
-      "away": "亚美尼亚",
-      "venue": "客",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "亚美尼亚",
-      "score": "2:3",
-      "away": "黑山",
-      "venue": "主",
-      "gf": 2,
-      "ga": 3
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "亚美尼亚",
-      "score": "2:0",
-      "away": "拉脱维亚",
-      "venue": "主",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-06-09",
-      "league": "友谊赛",
-      "home": "亚美尼亚",
-      "score": "1:1",
-      "away": "摩尔多瓦",
-      "venue": "主",
-      "gf": 1,
-      "ga": 1
-     },
-     {
-      "date": "26-06-06",
-      "league": "友谊赛",
-      "home": "亚美尼亚",
-      "score": "1:1",
-      "away": "哈萨克斯坦",
-      "venue": "主",
-      "gf": 1,
-      "ga": 1
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:06",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "拉脱维亚",
-      "games": "5",
-      "wdl": "0/1/4",
-      "goal": "3/8",
-      "point": "1"
-     },
-     {
-      "team": "亚美尼亚",
-      "games": "5",
-      "wdl": "1/2/2",
-      "goal": "5/6",
-      "point": "5"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home_team": "亚美尼亚",
-      "score": "2:0",
-      "visit_team": "拉脱维亚"
-     },
-     {
-      "date": "24-11-17",
-      "league": "欧国联",
-      "home_team": "拉脱维亚",
-      "score": "1:2",
-      "visit_team": "亚美尼亚"
-     },
-     {
-      "date": "24-09-08",
-      "league": "欧国联",
-      "home_team": "亚美尼亚",
-      "score": "4:1",
-      "visit_team": "拉脱维亚"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
-  {
-   "id": "fx_1949619",
-   "league": "欧国联",
-   "round": "欧国联C1组第6轮",
-   "home": "芬兰",
-   "away": "圣马力诺",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_234.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_v2_3287.png"
-   ],
-   "kickoff": "2026-11-16 01:00",
-   "date": "11-16",
-   "time": "01:00",
-   "weekday": "一",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949619v.htm",
-   "analysis": [],
-   "winrate": null,
-   "estimate": {
-    "home": 71.4,
-    "draw": 17.2,
-    "away": 11.4,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949619v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-16/1949619.htm",
-    "lambda_home": 2.337,
-    "lambda_away": 0.817,
-    "mu_home": 1.273,
-    "mu_away": 1.545,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 1.67,
-    "home_ga": 1.0,
-    "away_gf": 0.33,
-    "away_ga": 3.33,
-    "base": 1.409,
-    "shrink": 0.5,
-    "attack_home": 1.091,
-    "defence_home": 0.855,
-    "attack_away": 0.618,
-    "defence_away": 1.683,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "阿尔巴尼亚",
-      "score": "2:0",
-      "away": "芬兰",
-      "venue": "客",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "白俄罗斯",
-      "score": "1:0",
-      "away": "芬兰",
-      "venue": "客",
-      "gf": 0,
-      "ga": 1
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "芬兰",
-      "score": "2:1",
-      "away": "阿尔巴尼亚",
-      "venue": "主",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "芬兰",
-      "score": "0:0",
-      "away": "白俄罗斯",
-      "venue": "主",
-      "gf": 0,
-      "ga": 0
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "圣马力诺",
-      "score": "0:7",
-      "away": "芬兰",
-      "venue": "客",
-      "gf": 7,
-      "ga": 0
-     },
-     {
-      "date": "26-06-06",
-      "league": "足球友谊赛",
-      "home": "匈牙利",
-      "score": "2:1",
-      "away": "芬兰",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "圣马力诺",
-      "score": "0:2",
-      "away": "白俄罗斯",
-      "venue": "主",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "阿尔巴尼亚",
-      "score": "2:1",
-      "away": "圣马力诺",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-10-04",
-      "league": "欧国联",
-      "home": "白俄罗斯",
-      "score": "4:0",
-      "away": "圣马力诺",
-      "venue": "客",
-      "gf": 0,
-      "ga": 4
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "圣马力诺",
-      "score": "0:3",
-      "away": "阿尔巴尼亚",
-      "venue": "主",
-      "gf": 0,
-      "ga": 3
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "圣马力诺",
-      "score": "0:7",
-      "away": "芬兰",
-      "venue": "主",
-      "gf": 0,
-      "ga": 7
-     },
-     {
-      "date": "26-06-10",
-      "league": "足球友谊赛",
-      "home": "圣马力诺",
-      "score": "1:2",
-      "away": "阿塞拜疆",
-      "venue": "主",
-      "gf": 1,
-      "ga": 2
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:07",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "芬兰",
-      "games": "5",
-      "wdl": "2/1/2",
-      "goal": "9/4",
-      "point": "7"
-     },
-     {
-      "team": "圣马力诺",
-      "games": "5",
-      "wdl": "0/0/5",
-      "goal": "1/18",
-      "point": "0"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home_team": "圣马力诺",
-      "score": "0:7",
-      "visit_team": "芬兰"
-     },
-     {
-      "date": "23-11-21",
-      "league": "欧杯预",
-      "home_team": "圣马力诺",
-      "score": "1:2",
-      "visit_team": "芬兰"
-     },
-     {
-      "date": "23-06-20",
-      "league": "欧杯预",
-      "home_team": "芬兰",
-      "score": "6:0",
-      "visit_team": "圣马力诺"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
-  {
-   "id": "fx_1949620",
-   "league": "欧国联",
-   "round": "欧国联C1组第6轮",
-   "home": "白俄罗斯",
-   "away": "阿尔巴尼亚",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_2551.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_3265.png"
-   ],
-   "kickoff": "2026-11-16 01:00",
-   "date": "11-16",
-   "time": "01:00",
-   "weekday": "一",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949620v.htm",
-   "analysis": [],
-   "winrate": null,
-   "estimate": {
-    "home": 44.8,
-    "draw": 28.9,
-    "away": 26.3,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949620v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-16/1949620.htm",
-    "lambda_home": 1.255,
-    "lambda_away": 0.889,
-    "mu_home": 1.364,
-    "mu_away": 0.909,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 1.5,
-    "home_ga": 0.67,
-    "away_gf": 1.67,
-    "away_ga": 0.67,
-    "base": 1.136,
-    "shrink": 0.5,
-    "attack_home": 1.16,
-    "defence_home": 0.793,
-    "attack_away": 1.233,
-    "defence_away": 0.793,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "圣马力诺",
-      "score": "0:2",
-      "away": "白俄罗斯",
-      "venue": "客",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "白俄罗斯",
-      "score": "1:0",
-      "away": "芬兰",
-      "venue": "主",
-      "gf": 1,
-      "ga": 0
-     },
-     {
-      "date": "26-10-04",
-      "league": "欧国联",
-      "home": "白俄罗斯",
-      "score": "4:0",
-      "away": "圣马力诺",
-      "venue": "主",
-      "gf": 4,
-      "ga": 0
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "芬兰",
-      "score": "0:0",
-      "away": "白俄罗斯",
-      "venue": "客",
-      "gf": 0,
-      "ga": 0
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "阿尔巴尼亚",
-      "score": "2:0",
-      "away": "白俄罗斯",
-      "venue": "客",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-06-10",
-      "league": "足球友谊赛",
-      "home": "白俄罗斯",
-      "score": "2:2",
-      "away": "布基纳法索",
-      "venue": "主",
-      "gf": 2,
-      "ga": 2
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "阿尔巴尼亚",
-      "score": "2:0",
-      "away": "芬兰",
-      "venue": "主",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "阿尔巴尼亚",
-      "score": "2:1",
-      "away": "圣马力诺",
-      "venue": "主",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "芬兰",
-      "score": "2:1",
-      "away": "阿尔巴尼亚",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "圣马力诺",
-      "score": "0:3",
-      "away": "阿尔巴尼亚",
-      "venue": "客",
-      "gf": 3,
-      "ga": 0
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "阿尔巴尼亚",
-      "score": "2:0",
-      "away": "白俄罗斯",
-      "venue": "主",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-06-07",
-      "league": "国际友谊赛",
-      "home": "阿尔巴尼亚",
-      "score": "0:1",
-      "away": "卢森堡",
-      "venue": "主",
-      "gf": 0,
-      "ga": 1
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:06",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "白俄罗斯",
-      "games": "5",
-      "wdl": "3/1/1",
-      "goal": "7/2",
-      "point": "10"
-     },
-     {
-      "team": "阿尔巴尼亚",
-      "games": "5",
-      "wdl": "4/0/1",
-      "goal": "10/3",
-      "point": "12"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home_team": "阿尔巴尼亚",
-      "score": "2:0",
-      "visit_team": "白俄罗斯"
-     },
-     {
-      "date": "20-11-18",
-      "league": "欧国联",
-      "home_team": "阿尔巴尼亚",
-      "score": "3:2",
-      "visit_team": "白俄罗斯"
-     },
-     {
-      "date": "20-09-05",
-      "league": "欧国联",
-      "home_team": "白俄罗斯",
-      "score": "0:2",
-      "visit_team": "阿尔巴尼亚"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
-  {
-   "id": "fx_1949615",
-   "league": "欧国联",
-   "round": "欧国联A1组第6轮",
-   "home": "法国",
-   "away": "土耳其",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_249.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_254.png"
-   ],
-   "kickoff": "2026-11-16 03:45",
-   "date": "11-16",
-   "time": "03:45",
-   "weekday": "一",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949615v.htm",
-   "analysis": [
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af96a2928949native.htm",
-     "title": "法媒：杜埃已经恢复合练，可以出战对阵土耳其的比赛",
-     "date": "2026-11-15",
-     "desc": "直播吧11月15日讯 北京时间明天凌晨，法国将在欧国联比赛中主场对阵土耳其。 据法国媒体Foot Mercato报道，杜埃在对阵意大利比赛中被肘击下颌，这位法国前锋已经恢复合练，并佩戴护齿以保护下颌，他可以出战对阵土耳其的比赛。周中轮休的姆巴佩也已回归。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-15 16:17",
-     "category": "伤停 / 人员"
-    },
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af975a73794fnative.htm",
-     "title": "前国脚：我觉得在法国右路，孔德和卡卢卢是不错的首发-替补组合",
-     "date": "2026-11-15",
-     "desc": "直播吧11月15日讯 在接受RMC采访时，前法国队国脚杜布瓦谈到了高卢雄鸡目前的右后卫情况，他认为，孔德和卡卢卢是不错的首发-替补组合。 你如何看待边后卫在对阵意大利那场比赛中的表现？鉴于当前的局势和伤病情况，我们有理由如此担忧吗？ ——我觉得，这个问题现在被摆到了台面上，但古斯托自赛季开始以来出场时间非常少，所以要在这样一场非常重要、面对强队且如此艰难的比赛中直接首发，总是非常困难的。因此我也并不感到意外。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-15 17:11",
-     "category": "首发 / 阵容"
-    }
-   ],
-   "winrate": null,
-   "estimate": {
-    "home": 61.2,
-    "draw": 18.8,
-    "away": 20.0,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949615v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-16/1949615.htm",
-    "lambda_home": 2.41,
-    "lambda_away": 1.332,
-    "mu_home": 2.091,
-    "mu_away": 1.818,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 2.0,
-    "home_ga": 1.83,
-    "away_gf": 1.0,
-    "away_ga": 2.5,
-    "base": 1.955,
-    "shrink": 0.5,
-    "attack_home": 1.012,
-    "defence_home": 0.969,
-    "attack_away": 0.756,
-    "defence_away": 1.14,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "意大利",
-      "score": "3:1",
-      "away": "法国",
-      "venue": "客",
-      "gf": 1,
-      "ga": 3
-     },
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "法国",
-      "score": "4:1",
-      "away": "比利时",
-      "venue": "主",
-      "gf": 4,
-      "ga": 1
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "法国",
-      "score": "1:1",
-      "away": "意大利",
-      "venue": "主",
-      "gf": 1,
-      "ga": 1
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "比利时",
-      "score": "0:1",
-      "away": "法国",
-      "venue": "客",
-      "gf": 1,
-      "ga": 0
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "土耳其",
-      "score": "0:1",
-      "away": "法国",
-      "venue": "客",
-      "gf": 1,
-      "ga": 0
-     },
-     {
-      "date": "26-07-19",
-      "league": "世界杯",
-      "home": "法国",
-      "score": "4:6",
-      "away": "英格兰",
-      "venue": "主",
-      "gf": 4,
-      "ga": 6
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "土耳其",
-      "score": "1:2",
-      "away": "比利时",
-      "venue": "主",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "意大利",
-      "score": "3:1",
-      "away": "土耳其",
-      "venue": "客",
-      "gf": 1,
-      "ga": 3
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "比利时",
-      "score": "3:0",
-      "away": "土耳其",
-      "venue": "客",
-      "gf": 0,
-      "ga": 3
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "土耳其",
-      "score": "1:4",
-      "away": "意大利",
-      "venue": "主",
-      "gf": 1,
-      "ga": 4
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "土耳其",
-      "score": "0:1",
-      "away": "法国",
-      "venue": "主",
-      "gf": 0,
-      "ga": 1
-     },
-     {
-      "date": "26-06-26",
-      "league": "世界杯",
-      "home": "土耳其",
-      "score": "3:2",
-      "away": "美国",
-      "venue": "主",
-      "gf": 3,
-      "ga": 2
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:06",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "法国",
-      "games": "5",
-      "wdl": "3/1/1",
-      "goal": "8/5",
-      "point": "10"
-     },
-     {
-      "team": "土耳其",
-      "games": "5",
-      "wdl": "0/0/5",
-      "goal": "3/13",
-      "point": "0"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home_team": "土耳其",
-      "score": "0:1",
-      "visit_team": "法国"
-     },
-     {
-      "date": "19-10-15",
-      "league": "欧杯预",
-      "home_team": "法国",
-      "score": "1:1",
-      "visit_team": "土耳其"
-     },
-     {
-      "date": "19-06-09",
-      "league": "欧杯预",
-      "home_team": "土耳其",
-      "score": "2:0",
-      "visit_team": "法国"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
-  {
-   "id": "fx_1949616",
-   "league": "欧国联",
-   "round": "欧国联A1组第6轮",
-   "home": "比利时",
-   "away": "意大利",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_226.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_3257.png"
-   ],
-   "kickoff": "2026-11-16 03:45",
-   "date": "11-16",
-   "time": "03:45",
-   "weekday": "一",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949616v.htm",
-   "analysis": [
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af971500f8c8native.htm",
-     "title": "意媒预测意大利首发：曼奇尼重组三叉戟，迪马尔科改踢左边锋",
-     "date": "2026-11-15",
-     "desc": "直播吧11月15日讯 意大利即将迎来与比利时的比赛，全市场网谈到了意大利队的名单，并预测了曼奇尼会排出的首发。 塞巴斯蒂亚诺·埃斯波西托未进入主帅曼奇尼为今晚对阵比利时一战征召的球员名单，该场比赛是2026/27赛季欧国联四分之一决赛资格赛的最后一轮。这位萨索洛前锋周四晚对阵法国时首发出场，却不幸罚失点球，明天凌晨在布鲁塞尔博杜安国王球场争夺淘汰赛阶段入场券的23人名单中没有他的名字。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-15 16:50",
-     "category": "首发 / 阵容"
-    },
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-14/6af84e1b02bfanative.htm",
-     "title": "迪马济奥谈意大利阵容变化：迪马尔科取代坎比亚吉 中场两人竞争",
-     "date": "2026-11-14",
-     "desc": "直播吧11月14日讯 意大利知名记者迪马济奥撰文分析了下场欧国联赛事意大利队可能出现的人员变化，他在专栏中写道：“3-1力克法国队后，意大利队正积极备战欧国联小组赛收官战与比利时队的比赛。” “曼奇尼执教的这支蓝衣军团此役只需一场平局，即可提前锁定八强席位。不过，面对德布劳内领衔的比利时队，曼奇尼在首发排兵布阵上仍留有几分悬念。” “进攻端，在圣西罗之夜大放异彩的坎比亚吉接受了单独训练。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-14 20:12",
-     "category": "首发 / 阵容"
-    }
-   ],
-   "winrate": null,
-   "estimate": {
-    "home": 34.4,
-    "draw": 24.9,
-    "away": 40.7,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949616v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-16/1949616.htm",
-    "lambda_home": 1.364,
-    "lambda_away": 1.503,
-    "mu_home": 1.636,
-    "mu_away": 1.364,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 1.5,
-    "home_ga": 1.33,
-    "away_gf": 2.0,
-    "away_ga": 1.0,
-    "base": 1.5,
-    "shrink": 0.5,
-    "attack_home": 1.0,
-    "defence_home": 0.944,
-    "attack_away": 1.167,
-    "defence_away": 0.833,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "土耳其",
-      "score": "1:2",
-      "away": "比利时",
-      "venue": "客",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "法国",
-      "score": "4:1",
-      "away": "比利时",
-      "venue": "客",
-      "gf": 1,
-      "ga": 4
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "比利时",
-      "score": "3:0",
-      "away": "土耳其",
-      "venue": "主",
-      "gf": 3,
-      "ga": 0
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "比利时",
-      "score": "0:1",
-      "away": "法国",
-      "venue": "主",
-      "gf": 0,
-      "ga": 1
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "意大利",
-      "score": "0:2",
-      "away": "比利时",
-      "venue": "客",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-07-11",
-      "league": "世界杯",
-      "home": "西班牙",
-      "score": "2:1",
-      "away": "比利时",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "意大利",
-      "score": "3:1",
-      "away": "法国",
-      "venue": "主",
-      "gf": 3,
-      "ga": 1
-     },
-     {
-      "date": "26-10-06",
-      "league": "欧国联",
-      "home": "意大利",
-      "score": "3:1",
-      "away": "土耳其",
-      "venue": "主",
-      "gf": 3,
-      "ga": 1
-     },
-     {
-      "date": "26-10-03",
-      "league": "欧国联",
-      "home": "法国",
-      "score": "1:1",
-      "away": "意大利",
-      "venue": "客",
-      "gf": 1,
-      "ga": 1
-     },
-     {
-      "date": "26-09-29",
-      "league": "欧国联",
-      "home": "土耳其",
-      "score": "1:4",
-      "away": "意大利",
-      "venue": "客",
-      "gf": 4,
-      "ga": 1
-     },
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home": "意大利",
-      "score": "0:2",
-      "away": "比利时",
-      "venue": "主",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-06-08",
-      "league": "足球友谊赛",
-      "home": "希腊",
-      "score": "0:1",
-      "away": "意大利",
-      "venue": "客",
-      "gf": 1,
-      "ga": 0
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:06",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "比利时",
-      "games": "5",
-      "wdl": "3/0/2",
-      "goal": "8/6",
-      "point": "9"
-     },
-     {
-      "team": "意大利",
-      "games": "5",
-      "wdl": "3/1/1",
-      "goal": "11/6",
-      "point": "10"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-26",
-      "league": "欧国联",
-      "home_team": "意大利",
-      "score": "0:2",
-      "visit_team": "比利时"
-     },
-     {
-      "date": "24-11-15",
-      "league": "欧国联",
-      "home_team": "比利时",
-      "score": "0:1",
-      "visit_team": "意大利"
-     },
-     {
-      "date": "24-10-11",
-      "league": "欧国联",
-      "home_team": "意大利",
-      "score": "2:2",
-      "visit_team": "比利时"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
-  {
-   "id": "fx_1949617",
-   "league": "欧国联",
-   "round": "欧国联A3组第6轮",
-   "home": "克罗地亚",
-   "away": "捷克",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_v2_2984.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_257.png"
-   ],
-   "kickoff": "2026-11-16 03:45",
-   "date": "11-16",
-   "time": "03:45",
-   "weekday": "一",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949617v.htm",
-   "analysis": [],
-   "winrate": null,
-   "estimate": {
-    "home": 33.1,
-    "draw": 24.0,
-    "away": 42.9,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949617v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-16/1949617.htm",
-    "lambda_home": 1.405,
-    "lambda_away": 1.633,
-    "mu_home": 1.455,
-    "mu_away": 2.0,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 1.0,
-    "home_ga": 3.0,
-    "away_gf": 0.33,
-    "away_ga": 2.5,
-    "base": 1.727,
-    "shrink": 0.5,
-    "attack_home": 0.789,
-    "defence_home": 1.368,
-    "attack_away": 0.596,
-    "defence_away": 1.224,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "英格兰",
-      "score": "2:1",
-      "away": "克罗地亚",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "克罗地亚",
-      "score": "1:2",
-      "away": "西班牙",
-      "venue": "主",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-10-04",
-      "league": "欧国联",
-      "home": "克罗地亚",
-      "score": "0:7",
-      "away": "英格兰",
-      "venue": "主",
-      "gf": 0,
-      "ga": 7
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "西班牙",
-      "score": "4:1",
-      "away": "克罗地亚",
-      "venue": "客",
-      "gf": 1,
-      "ga": 4
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "捷克",
-      "score": "1:2",
-      "away": "克罗地亚",
-      "venue": "客",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-07-03",
-      "league": "世界杯",
-      "home": "葡萄牙",
-      "score": "2:1",
-      "away": "克罗地亚",
-      "venue": "客",
-      "gf": 1,
-      "ga": 2
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "捷克",
-      "score": "0:2",
-      "away": "西班牙",
-      "venue": "主",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "英格兰",
-      "score": "3:0",
-      "away": "捷克",
-      "venue": "客",
-      "gf": 0,
-      "ga": 3
-     },
-     {
-      "date": "26-10-04",
-      "league": "欧国联",
-      "home": "西班牙",
-      "score": "3:1",
-      "away": "捷克",
-      "venue": "客",
-      "gf": 1,
-      "ga": 3
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "捷克",
-      "score": "0:2",
-      "away": "英格兰",
-      "venue": "主",
-      "gf": 0,
-      "ga": 2
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "捷克",
-      "score": "1:2",
-      "away": "克罗地亚",
-      "venue": "主",
-      "gf": 1,
-      "ga": 2
-     },
-     {
-      "date": "26-06-25",
-      "league": "世界杯",
-      "home": "捷克",
-      "score": "0:3",
-      "away": "墨西哥",
-      "venue": "主",
-      "gf": 0,
-      "ga": 3
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:07",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "克罗地亚",
-      "games": "5",
-      "wdl": "1/0/4",
-      "goal": "5/16",
-      "point": "3"
-     },
-     {
-      "team": "捷克",
-      "games": "5",
-      "wdl": "0/0/5",
-      "goal": "2/12",
-      "point": "0"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home_team": "捷克",
-      "score": "1:2",
-      "visit_team": "克罗地亚"
-     },
-     {
-      "date": "25-10-10",
-      "league": "世欧预",
-      "home_team": "捷克",
-      "score": "0:0",
-      "visit_team": "克罗地亚"
-     },
-     {
-      "date": "25-06-10",
-      "league": "世欧预",
-      "home_team": "克罗地亚",
-      "score": "5:1",
-      "visit_team": "捷克"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
-  {
-   "id": "fx_1949618",
-   "league": "欧国联",
-   "round": "欧国联A3组第6轮",
-   "home": "西班牙",
-   "away": "英格兰",
-   "logos": [
-    "https://duihui.duoduocdn.com/zuqiu/team_v2_251.png",
-    "https://duihui.duoduocdn.com/zuqiu/team_252.png"
-   ],
-   "kickoff": "2026-11-16 03:45",
-   "date": "11-16",
-   "time": "03:45",
-   "weekday": "一",
-   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949618v.htm",
-   "analysis": [
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af9702fc4a16native.htm",
-     "title": "天空体育：英格兰中前场主力尽出，特拉福德将首发出战西班牙",
-     "date": "2026-11-15",
-     "desc": "直播吧11月15日讯 英格兰将在今晚做客马德里迎来与西班牙的欧国联焦点战，三狮军团若能击败这支世界冠军球队，便能锁定A3小组头名。 面对世界最强球队，英格兰主帅图赫尔的防线排兵布阵将成为重中之重，而他确实面临着诸多抉择，天空体育也发文进行了前瞻和分析。 中前场主力尽出 在周四坐镇温布利对阵克罗地亚的赛前，英格兰主帅曾表示，尽管两场比赛仅隔三天，但他非常乐意在两场比赛中都派出全主力阵容，他也确实兑现了诺言。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-15 16:59",
-     "category": "首发 / 阵容"
-    },
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af96629cd994native.htm",
-     "title": "英格兰队发布对阵西班牙海报：贝林厄姆、阿诺德、霍尔出镜",
-     "date": "2026-11-15",
-     "desc": "直播吧11月15日讯 北京时间明天凌晨，英格兰将在欧国联比赛中客场对阵西班牙。 英格兰队官方社媒发布了为此役制作的海报，贝林厄姆、阿诺德、刘易斯·霍尔出镜。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-15 16:00",
-     "category": "赛前动态"
-    },
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af977ad26c8enative.htm",
-     "title": "西班牙对阵英格兰球员名单：亚马尔10号领衔",
-     "date": "2026-11-15",
-     "desc": "直播吧11月15日讯 西班牙即将迎来对阵英格兰的欧国联比赛，西班牙足协方面公布了球员号码名单。 西班牙国家队将在欧国联小组赛最后一轮对阵英格兰。路易斯·德拉富恩特的球队五战全胜，已晋级四分之一决赛，此役目标是锁定小组第一。 两队此前曾在温布利球场交手，世界冠军西班牙凭借亚马尔、巴埃纳和奥亚萨瓦尔的进球以3比2获胜，大都会球场一战将是两队历史上第30次交锋。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-15 17:14",
-     "category": "赛前动态"
-    },
-    {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-14/6af84192eaa39native.htm",
-     "title": "电讯报：只要保持健康，代表英格兰出战200场是贝林能实现的目标",
-     "date": "2026-11-14",
-     "desc": "直播吧11月14日讯 在贝林厄姆表现出色后，《每日电讯报》撰文分析了这名球员在英格兰队的出场次数。 难怪哈里·凯恩在准备打破英格兰队出场纪录时，就已经开始扭头关注身后的追赶者了。就在这位前锋迎来第 126 场国家队比赛的当晚，贝林厄姆收获了他的第 61 场国家队比赛，正朝着成为该国首位加入专属“ 200 场俱乐部”球员的目标稳步迈进。",
-     "source": "直播吧 · 足球资讯",
-     "time": "11-14 19:18",
-     "category": "伤停 / 人员"
-    }
-   ],
-   "winrate": null,
-   "estimate": {
-    "home": 26.1,
-    "draw": 20.0,
-    "away": 53.9,
-    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
-    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
-    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949618v.htm",
-    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-16/1949618.htm",
-    "lambda_home": 1.559,
-    "lambda_away": 2.281,
-    "mu_home": 1.727,
-    "mu_away": 2.273,
-    "sample_games": 11,
-    "home_games": 6,
-    "away_games": 6,
-    "home_gf": 2.33,
-    "home_ga": 0.83,
-    "away_gf": 3.67,
-    "away_ga": 1.33,
-    "base": 2.0,
-    "shrink": 0.5,
-    "attack_home": 1.083,
-    "defence_home": 0.708,
-    "attack_away": 1.417,
-    "defence_away": 0.833,
-    "extreme": false,
-    "recent_home": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "捷克",
-      "score": "0:2",
-      "away": "西班牙",
-      "venue": "客",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "克罗地亚",
-      "score": "1:2",
-      "away": "西班牙",
-      "venue": "客",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-10-04",
-      "league": "欧国联",
-      "home": "西班牙",
-      "score": "3:1",
-      "away": "捷克",
-      "venue": "主",
-      "gf": 3,
-      "ga": 1
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "西班牙",
-      "score": "4:1",
-      "away": "克罗地亚",
-      "venue": "主",
-      "gf": 4,
-      "ga": 1
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "英格兰",
-      "score": "2:3",
-      "away": "西班牙",
-      "venue": "客",
-      "gf": 3,
-      "ga": 2
-     },
-     {
-      "date": "26-07-20",
-      "league": "世界杯",
-      "home": "西班牙",
-      "score": "0:0",
-      "away": "阿根廷",
-      "venue": "主",
-      "gf": 0,
-      "ga": 0
-     }
-    ],
-    "recent_away": [
-     {
-      "date": "26-11-13",
-      "league": "欧国联",
-      "home": "英格兰",
-      "score": "2:1",
-      "away": "克罗地亚",
-      "venue": "主",
-      "gf": 2,
-      "ga": 1
-     },
-     {
-      "date": "26-10-07",
-      "league": "欧国联",
-      "home": "英格兰",
-      "score": "3:0",
-      "away": "捷克",
-      "venue": "主",
-      "gf": 3,
-      "ga": 0
-     },
-     {
-      "date": "26-10-04",
-      "league": "欧国联",
-      "home": "克罗地亚",
-      "score": "0:7",
-      "away": "英格兰",
-      "venue": "客",
-      "gf": 7,
-      "ga": 0
-     },
-     {
-      "date": "26-09-30",
-      "league": "欧国联",
-      "home": "捷克",
-      "score": "0:2",
-      "away": "英格兰",
-      "venue": "客",
-      "gf": 2,
-      "ga": 0
-     },
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home": "英格兰",
-      "score": "2:3",
-      "away": "西班牙",
-      "venue": "主",
-      "gf": 2,
-      "ga": 3
-     },
-     {
-      "date": "26-07-19",
-      "league": "世界杯",
-      "home": "法国",
-      "score": "4:6",
-      "away": "英格兰",
-      "venue": "客",
-      "gf": 6,
-      "ga": 4
-     }
-    ],
-    "generated_at": "2026-11-15 18:17:07",
-    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
-    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
-    "official_points": [
-     {
-      "team": "西班牙",
-      "games": "5",
-      "wdl": "5/0/0",
-      "goal": "14/5",
-      "point": "15"
-     },
-     {
-      "team": "英格兰",
-      "games": "5",
-      "wdl": "4/0/1",
-      "goal": "16/4",
-      "point": "12"
-     }
-    ],
-    "head_to_head": [
-     {
-      "date": "26-09-27",
-      "league": "欧国联",
-      "home_team": "英格兰",
-      "score": "2:3",
-      "visit_team": "西班牙"
-     },
-     {
-      "date": "24-07-15",
-      "league": "欧洲杯",
-      "home_team": "西班牙",
-      "score": "2:1",
-      "visit_team": "英格兰"
-     },
-     {
-      "date": "18-10-16",
-      "league": "欧国联",
-      "home_team": "西班牙",
-      "score": "2:3",
-      "visit_team": "英格兰"
-     }
-    ]
-   },
-   "estimate_status": ""
-  },
   {
    "id": "fx_1949621",
    "league": "欧国联",
@@ -1942,7 +171,7 @@
       "ga": 1
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:07",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -2154,7 +383,7 @@
       "ga": 2
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:07",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -2366,7 +595,7 @@
       "ga": 2
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:07",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -2578,7 +807,7 @@
       "ga": 2
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:07",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -2790,7 +1019,7 @@
       "ga": 0
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:07",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -2850,7 +1079,17 @@
    "time": "03:45",
    "weekday": "二",
    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949623v.htm",
-   "analysis": [],
+   "analysis": [
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-16/6afae3bf3652bnative.htm",
+     "title": "前国脚：与德国一战荷兰不应改变阵容，我们要证明自己依然是劲旅",
+     "date": "2026-11-16",
+     "desc": "直播吧11月16日讯 前荷兰国脚范哈内赫姆接受了媒体的采访，他认为与德国队的较量荷兰队应沿用上一场7-0大胜希腊的阵容。 范哈内赫姆表示：“有消息称，荷兰队阵中部分球员因身背黄牌面临停赛风险，可能会在对阵德国队的比赛中轮休。如果消息属实，这实在令人懊恼，三天前我们刚大胜希腊，还有什么比趁热打铁、向德国人展示我们的真正实力更让人兴奋的呢？",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-16 19:14",
+     "category": "首发 / 阵容"
+    }
+   ],
    "winrate": null,
    "estimate": {
     "home": 40.4,
@@ -3002,7 +1241,7 @@
       "ga": 1
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:07",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -3064,13 +1303,22 @@
    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949624v.htm",
    "analysis": [
     {
-     "url": "https://news.zhibo8.com/zuqiu/2026-11-14/6af79e4dbc5adnative.htm",
-     "title": "马伦对阵希腊1射2传获评10分，连续8场比赛参与进球",
-     "date": "2026-11-14",
-     "desc": "直播吧11月14日讯 欧国联比赛，荷兰主场7-0击败希腊。 马伦本场比赛1射2传，获得10分评价，他连续8场俱乐部+国家队比赛参与进球，这期间打进7球，助攻5次。 马伦本场比赛数据： 出场时间——90分钟 进球——1 助攻——2 射门——1（射正1） 尝试过人——7（成功4） 丢失球权——8 预期进球——0.1 触球——33 传球——21 关键传球——3 传球成功率——90.5% 地面对抗——10（成功5） 犯规——2 被犯规——1 媒…",
-     "source": "直播吧",
-     "time": "11-14 07:35",
-     "category": "赛前动态"
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-16/6afad2c1e3fe1native.htm",
+     "title": "标晚：核磁共振检查结果一切正常，预计措利斯可以出战塞尔维亚",
+     "date": "2026-11-16",
+     "desc": "直播吧11月16日讯 据《伦敦标准晚报》报道，阿森纳边锋措利斯在核磁共振检查结果显示一切正常后，预计将参加希腊对阵塞尔维亚的欧国联比赛。 在周五希腊 0-7 不敌荷兰的比赛中，措利斯出场了 73 分钟，那场比赛他的阿森纳队友廷伯梅开二度。比赛结束后，人们对措利斯的身体状况产生了担忧，这位 24 岁的球员在希腊队恢复训练时感到了一些肌肉不适。 措利斯在周末接受了核磁共振检查，起初人们认为他能否出战周一晚主场对阵塞尔维亚的比赛存疑。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-16 17:55",
+     "category": "伤停 / 人员"
+    },
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-16/6afa17eda22eanative.htm",
+     "title": "记者：措利斯身体有些不适但情况并不严重，能否出战塞尔维亚存疑",
+     "date": "2026-11-16",
+     "desc": "直播吧11月16日讯 据希腊记者马纳克斯的消息，希腊边锋措利斯在对阵荷兰的比赛结束后，身体一直有些不适。 希腊队安排他接受了核磁共振检查，以确认是否存在伤病问题。目前来看，情况似乎并不严重。 不过，措利斯能否出战希腊对阵塞尔维亚的比赛，目前仍存疑。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-16 04:39",
+     "category": "伤停 / 人员"
     }
    ],
    "winrate": null,
@@ -3224,7 +1472,7 @@
       "ga": 5
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:07",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -3284,7 +1532,26 @@
    "time": "03:45",
    "weekday": "二",
    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949625v.htm",
-   "analysis": [],
+   "analysis": [
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af9d03753982native.htm",
+     "title": "瑞士主帅确认阿坎吉无法出战苏格兰 据报道球员身体疲劳已回国米",
+     "date": "2026-11-15",
+     "desc": "直播吧11月15日讯 瑞士国家队主帅雅金在欧国联对阵苏格兰的赛前新闻发布会上接受了媒体采访，这位主教练确认了阿坎吉的缺席，由于轻微的身体疲劳，阿坎吉已经返回国米，不过这一情况似乎并未引起国米的担忧。 雅金：“明天的比赛我有多种选择。我们会做出一些人员调整。观察主力后卫们的身体状态是否良好非常重要。阿坎吉无法出战，因此我们会看看埃尔维迪的情况如何。如果他状态没问题，就会上场比赛。此外，我还有埃赖·居梅尔特和阿德里安·巴伊拉米可供调遣。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-15 23:39",
+     "category": "伤停 / 人员"
+    },
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-16/6afab28fc23e9native.htm",
+     "title": "意媒：阿坎吉因肌肉疲劳离开瑞士队；泽林斯基可能出战瑞典",
+     "date": "2026-11-16",
+     "desc": "直播吧11月16日讯 “国米新闻网”援引了《米兰体育报》关于国米球员阿坎吉与泽林斯基的最新情况。 阿坎吉在瑞士0-0战平斯洛文尼亚的赛后离开了国家队集训营。由于瑞士队已提前锁定欧国联A级的升级资格，球队在后续比赛中无需再冒风险。 据《米兰体育报》透露，这位蓝黑军团后卫因肌肉疲劳被批准提前离队休养。 报道指出：“出于谨慎起见，阿坎吉将缺席对阵苏格兰的比赛，此役结果已不影响瑞士队的小组头名地位。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-16 15:47",
+     "category": "伤停 / 人员"
+    }
+   ],
    "winrate": null,
    "estimate": {
     "home": 48.3,
@@ -3436,7 +1703,7 @@
       "ga": 3
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:08",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -3648,7 +1915,7 @@
       "ga": 2
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:08",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -3860,7 +2127,7 @@
       "ga": 0
      }
     ],
-    "generated_at": "2026-11-15 18:17:07",
+    "generated_at": "2026-11-16 20:14:08",
     "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
     "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
     "official_points": [
@@ -3900,6 +2167,3868 @@
       "home_team": "马耳他",
       "score": "2:0",
       "visit_team": "直布罗陀"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949629",
+   "league": "欧国联",
+   "round": "欧国联A4组第6轮",
+   "home": "丹麦",
+   "away": "挪威",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_3259.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_v2_3267.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949629v.htm",
+   "analysis": [
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af9604bc6013native.htm",
+     "title": "捣乱！葡媒：葡萄牙主场致敬C罗 丹麦球迷鼓掌但也多次高喊\"梅西\"",
+     "date": "2026-11-15",
+     "desc": "直播吧11月15日讯 欧国联A4组第5轮，葡萄牙主场1-4不敌丹麦，后C罗时代首战惨败。葡萄牙本场举行了致敬C罗的活动，全队穿C罗的7号球衣进场，第7分钟球迷鼓掌+大屏幕展示C罗经典庆祝。 据记录报、O Jogo等多家葡萄牙媒体报道，丹麦球迷在致敬活动中捣乱，他们多次高喊梅西的名字，以此嘲讽现场观众，此举招致了葡萄牙球迷的嘘声。 不过葡媒也表示，在比赛第7分钟向C罗致敬的环节中，这些丹麦球迷也参与了鼓掌。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-15 15:55",
+     "category": "赛前动态"
+    }
+   ],
+   "winrate": null,
+   "estimate": {
+    "home": 44.0,
+    "draw": 23.0,
+    "away": 33.0,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949629v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949629.htm",
+    "lambda_home": 1.756,
+    "lambda_away": 1.496,
+    "mu_home": 1.545,
+    "mu_away": 1.545,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.83,
+    "home_ga": 1.33,
+    "away_gf": 1.67,
+    "away_ga": 1.67,
+    "base": 1.545,
+    "shrink": 0.5,
+    "attack_home": 1.093,
+    "defence_home": 0.931,
+    "attack_away": 1.039,
+    "defence_away": 1.039,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "葡萄牙",
+      "score": "1:4",
+      "away": "丹麦",
+      "venue": "客",
+      "gf": 4,
+      "ga": 1
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "威尔士",
+      "score": "0:1",
+      "away": "丹麦",
+      "venue": "客",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "丹麦",
+      "score": "2:4",
+      "away": "葡萄牙",
+      "venue": "主",
+      "gf": 2,
+      "ga": 4
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "丹麦",
+      "score": "2:0",
+      "away": "威尔士",
+      "venue": "主",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "挪威",
+      "score": "3:2",
+      "away": "丹麦",
+      "venue": "客",
+      "gf": 2,
+      "ga": 3
+     },
+     {
+      "date": "26-06-04",
+      "league": "足球友谊赛",
+      "home": "丹麦",
+      "score": "0:0",
+      "away": "民主刚果",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "挪威",
+      "score": "3:1",
+      "away": "威尔士",
+      "venue": "主",
+      "gf": 3,
+      "ga": 1
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "葡萄牙",
+      "score": "2:1",
+      "away": "挪威",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "威尔士",
+      "score": "2:1",
+      "away": "挪威",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "挪威",
+      "score": "1:2",
+      "away": "葡萄牙",
+      "venue": "主",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "挪威",
+      "score": "3:2",
+      "away": "丹麦",
+      "venue": "主",
+      "gf": 3,
+      "ga": 2
+     },
+     {
+      "date": "26-07-12",
+      "league": "世界杯",
+      "home": "挪威",
+      "score": "1:1",
+      "away": "英格兰",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "丹麦",
+      "games": "5",
+      "wdl": "3/0/2",
+      "goal": "11/8",
+      "point": "9"
+     },
+     {
+      "team": "挪威",
+      "games": "5",
+      "wdl": "2/0/3",
+      "goal": "9/9",
+      "point": "6"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home_team": "挪威",
+      "score": "3:2",
+      "visit_team": "丹麦"
+     },
+     {
+      "date": "24-06-09",
+      "league": "国际友谊",
+      "home_team": "丹麦",
+      "score": "3:1",
+      "visit_team": "挪威"
+     },
+     {
+      "date": "13-11-16",
+      "league": "球会友谊",
+      "home_team": "丹麦",
+      "score": "2:1",
+      "visit_team": "挪威"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949630",
+   "league": "欧国联",
+   "round": "欧国联A4组第6轮",
+   "home": "威尔士",
+   "away": "葡萄牙",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_240.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_v2_256.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949630v.htm",
+   "analysis": [
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-16/6afae9aa3e8c9native.htm",
+     "title": "告病退出本期葡萄牙队！马卡：B席伤情警报解除，可以为皇马出战",
+     "date": "2026-11-16",
+     "desc": "直播吧11月16日讯 据《马卡报》报道，皇家马德里已经解除了关于B席伤情的警报。这位葡萄牙中场因轻微不适退出国家队集训，但检查显示并无大碍，没有受伤。 此前，葡萄牙足协发布公告称，B席在对阵丹麦的比赛后感到不适，因此不会出战对阵威尔士的比赛，并提前离开集训营。葡萄牙足协表示：“贝尔纳多·席尔瓦接受了临床评估，被葡萄牙足协健康与表现部门判定为不适合参赛。” 这一消息一度引发皇马方面的担忧，不过据了解，B席离队只是出于预防措施。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-16 19:33",
+     "category": "伤停 / 人员"
+    },
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af9604bc6013native.htm",
+     "title": "捣乱！葡媒：葡萄牙主场致敬C罗 丹麦球迷鼓掌但也多次高喊\"梅西\"",
+     "date": "2026-11-15",
+     "desc": "直播吧11月15日讯 欧国联A4组第5轮，葡萄牙主场1-4不敌丹麦，后C罗时代首战惨败。葡萄牙本场举行了致敬C罗的活动，全队穿C罗的7号球衣进场，第7分钟球迷鼓掌+大屏幕展示C罗经典庆祝。 据记录报、O Jogo等多家葡萄牙媒体报道，丹麦球迷在致敬活动中捣乱，他们多次高喊梅西的名字，以此嘲讽现场观众，此举招致了葡萄牙球迷的嘘声。 不过葡媒也表示，在比赛第7分钟向C罗致敬的环节中，这些丹麦球迷也参与了鼓掌。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-15 15:55",
+     "category": "赛前动态"
+    },
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af931bdf2ba7native.htm",
+     "title": "砸场子！C罗迷弟霍伊伦双响送葡萄牙主场惨败，割喉+滑跪激情庆祝",
+     "date": "2026-11-15",
+     "desc": "直播吧11月15日讯 欧国联A4组第5轮，葡萄牙主场1-4不敌丹麦，后C罗时代首战惨败，遭遇队史正赛主场最大比分失利。 本场比赛，霍伊伦左右开弓梅开二度，获评8.9分全场最高，是丹麦取胜的最大功臣。霍伊伦打入第一球后做出大拇指向下+割喉的庆祝动作，打入第二球后激情滑跪庆祝。 霍伊伦是C罗迷弟，首回合交手丹麦主场2-4不敌葡萄牙，他打进一球并模仿C罗招牌的SIU庆祝，赛后 他表示“庆祝动作是致敬我的偶像C罗” 。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-15 12:39",
+     "category": "赛前动态"
+    },
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-15/6af9152f65849native.htm",
+     "title": "主场惨败！葡萄牙INS遭刷屏：C罗万岁 拉莫斯在哪？C罗2-0葡萄牙",
+     "date": "2026-11-15",
+     "desc": "直播吧11月15日讯 欧国联A4组第5轮，葡萄牙主场1-4不敌丹麦，后C罗时代首战惨败，遭遇队史正赛主场最大比分失利。赛后，葡萄牙国家队官方INS发布的比赛战报遭球迷刷屏，球迷们纷纷开始嘲笑并提及C罗。 葡萄牙国家队官方INS评论区： “C罗万岁” “拉莫斯在哪？” “满意 👏” “C罗2-0葡萄牙队🔥” “C罗在家里肯定笑得前仰后合。”",
+     "source": "直播吧 · 我来说两句",
+     "time": "11-15 10:17",
+     "category": "赛前动态"
+    }
+   ],
+   "winrate": null,
+   "estimate": {
+    "home": 24.4,
+    "draw": 24.3,
+    "away": 51.3,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949630v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949630.htm",
+    "lambda_home": 1.077,
+    "lambda_away": 1.674,
+    "mu_home": 1.455,
+    "mu_away": 1.455,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 0.67,
+    "home_ga": 1.67,
+    "away_gf": 1.67,
+    "away_ga": 1.5,
+    "base": 1.455,
+    "shrink": 0.5,
+    "attack_home": 0.729,
+    "defence_home": 1.073,
+    "attack_away": 1.073,
+    "defence_away": 1.016,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "挪威",
+      "score": "3:1",
+      "away": "威尔士",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "威尔士",
+      "score": "0:1",
+      "away": "丹麦",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "威尔士",
+      "score": "2:1",
+      "away": "挪威",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "丹麦",
+      "score": "2:0",
+      "away": "威尔士",
+      "venue": "客",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "葡萄牙",
+      "score": "1:0",
+      "away": "威尔士",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-06-07",
+      "league": "足球友谊赛",
+      "home": "罗马尼亚",
+      "score": "2:1",
+      "away": "威尔士",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "葡萄牙",
+      "score": "1:4",
+      "away": "丹麦",
+      "venue": "主",
+      "gf": 1,
+      "ga": 4
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "葡萄牙",
+      "score": "2:1",
+      "away": "挪威",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "丹麦",
+      "score": "2:4",
+      "away": "葡萄牙",
+      "venue": "客",
+      "gf": 4,
+      "ga": 2
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "挪威",
+      "score": "1:2",
+      "away": "葡萄牙",
+      "venue": "客",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "葡萄牙",
+      "score": "1:0",
+      "away": "威尔士",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-07-07",
+      "league": "世界杯",
+      "home": "葡萄牙",
+      "score": "0:1",
+      "away": "西班牙",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "威尔士",
+      "games": "5",
+      "wdl": "1/0/4",
+      "goal": "3/8",
+      "point": "3"
+     },
+     {
+      "team": "葡萄牙",
+      "games": "5",
+      "wdl": "4/0/1",
+      "goal": "10/8",
+      "point": "12"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home_team": "葡萄牙",
+      "score": "1:0",
+      "visit_team": "威尔士"
+     },
+     {
+      "date": "16-07-07",
+      "league": "欧洲杯",
+      "home_team": "葡萄牙",
+      "score": "2:0",
+      "visit_team": "威尔士"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949631",
+   "league": "欧国联",
+   "round": "欧国联B2组第6轮",
+   "home": "匈牙利",
+   "away": "北爱尔兰",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_3271.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_3268.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949631v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 31.4,
+    "draw": 35.4,
+    "away": 33.2,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949631v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949631.htm",
+    "lambda_home": 0.782,
+    "lambda_away": 0.814,
+    "mu_home": 0.818,
+    "mu_away": 1.0,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.33,
+    "home_ga": 0.5,
+    "away_gf": 1.0,
+    "away_ga": 0.5,
+    "base": 0.909,
+    "shrink": 0.5,
+    "attack_home": 1.233,
+    "defence_home": 0.775,
+    "attack_away": 1.05,
+    "defence_away": 0.775,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "格鲁吉亚",
+      "score": "0:2",
+      "away": "匈牙利",
+      "venue": "客",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "乌克兰",
+      "score": "1:2",
+      "away": "匈牙利",
+      "venue": "客",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "匈牙利",
+      "score": "1:0",
+      "away": "格鲁吉亚",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "北爱尔兰",
+      "score": "0:0",
+      "away": "匈牙利",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "匈牙利",
+      "score": "0:1",
+      "away": "乌克兰",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-06-10",
+      "league": "足球友谊赛",
+      "home": "匈牙利",
+      "score": "3:1",
+      "away": "哈萨克斯坦",
+      "venue": "主",
+      "gf": 3,
+      "ga": 1
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "北爱尔兰",
+      "score": "1:0",
+      "away": "乌克兰",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "北爱尔兰",
+      "score": "0:0",
+      "away": "格鲁吉亚",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "乌克兰",
+      "score": "0:3",
+      "away": "北爱尔兰",
+      "venue": "客",
+      "gf": 3,
+      "ga": 0
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "北爱尔兰",
+      "score": "0:0",
+      "away": "匈牙利",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "格鲁吉亚",
+      "score": "0:1",
+      "away": "北爱尔兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-06-09",
+      "league": "足球友谊赛",
+      "home": "法国",
+      "score": "3:1",
+      "away": "北爱尔兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "匈牙利",
+      "games": "5",
+      "wdl": "3/1/1",
+      "goal": "5/2",
+      "point": "10"
+     },
+     {
+      "team": "北爱尔兰",
+      "games": "5",
+      "wdl": "3/2/0",
+      "goal": "5/0",
+      "point": "11"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home_team": "北爱尔兰",
+      "score": "0:0",
+      "visit_team": "匈牙利"
+     },
+     {
+      "date": "22-03-30",
+      "league": "国际友谊",
+      "home_team": "北爱尔兰",
+      "score": "0:1",
+      "visit_team": "匈牙利"
+     },
+     {
+      "date": "15-09-08",
+      "league": "欧杯预",
+      "home_team": "北爱尔兰",
+      "score": "1:1",
+      "visit_team": "匈牙利"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949632",
+   "league": "欧国联",
+   "round": "欧国联B3组第6轮",
+   "home": "以色列",
+   "away": "奥地利",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_3270.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_236.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949632v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 31.6,
+    "draw": 28.9,
+    "away": 39.5,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949632v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949632.htm",
+    "lambda_home": 1.031,
+    "lambda_away": 1.189,
+    "mu_home": 1.273,
+    "mu_away": 0.909,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 0.5,
+    "home_ga": 1.17,
+    "away_gf": 1.67,
+    "away_ga": 1.33,
+    "base": 1.091,
+    "shrink": 0.5,
+    "attack_home": 0.729,
+    "defence_home": 1.035,
+    "attack_away": 1.264,
+    "defence_away": 1.111,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-14",
+      "league": "欧国联",
+      "home": "科索沃",
+      "score": "0:0",
+      "away": "以色列",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "爱尔兰",
+      "score": "1:1",
+      "away": "以色列",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "以色列",
+      "score": "0:0",
+      "away": "科索沃",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "以色列",
+      "score": "0:3",
+      "away": "爱尔兰",
+      "venue": "主",
+      "gf": 0,
+      "ga": 3
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "奥地利",
+      "score": "3:1",
+      "away": "以色列",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-06-04",
+      "league": "国际友谊赛",
+      "home": "阿尔巴尼亚",
+      "score": "0:1",
+      "away": "以色列",
+      "venue": "客",
+      "gf": 1,
+      "ga": 0
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "奥地利",
+      "score": "1:0",
+      "away": "爱尔兰",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "科索沃",
+      "score": "1:1",
+      "away": "奥地利",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "爱尔兰",
+      "score": "2:2",
+      "away": "奥地利",
+      "venue": "客",
+      "gf": 2,
+      "ga": 2
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "奥地利",
+      "score": "3:1",
+      "away": "科索沃",
+      "venue": "主",
+      "gf": 3,
+      "ga": 1
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "奥地利",
+      "score": "3:1",
+      "away": "以色列",
+      "venue": "主",
+      "gf": 3,
+      "ga": 1
+     },
+     {
+      "date": "26-07-03",
+      "league": "世界杯",
+      "home": "西班牙",
+      "score": "3:0",
+      "away": "奥地利",
+      "venue": "客",
+      "gf": 0,
+      "ga": 3
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "以色列",
+      "games": "5",
+      "wdl": "0/3/2",
+      "goal": "2/7",
+      "point": "3"
+     },
+     {
+      "team": "奥地利",
+      "games": "5",
+      "wdl": "3/2/0",
+      "goal": "10/5",
+      "point": "11"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home_team": "奥地利",
+      "score": "3:1",
+      "visit_team": "以色列"
+     },
+     {
+      "date": "21-11-13",
+      "league": "世欧预",
+      "home_team": "奥地利",
+      "score": "4:2",
+      "visit_team": "以色列"
+     },
+     {
+      "date": "21-09-05",
+      "league": "世欧预",
+      "home_team": "以色列",
+      "score": "5:2",
+      "visit_team": "奥地利"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949633",
+   "league": "欧国联",
+   "round": "欧国联B3组第6轮",
+   "home": "爱尔兰",
+   "away": "科索沃",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_3263.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_3288.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949633v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 40.9,
+    "draw": 31.6,
+    "away": 27.5,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949633v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949633.htm",
+    "lambda_home": 1.067,
+    "lambda_away": 0.818,
+    "mu_home": 1.182,
+    "mu_away": 0.818,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.17,
+    "home_ga": 1.0,
+    "away_gf": 1.0,
+    "away_ga": 0.67,
+    "base": 1.0,
+    "shrink": 0.5,
+    "attack_home": 1.083,
+    "defence_home": 1.0,
+    "attack_away": 1.0,
+    "defence_away": 0.833,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "奥地利",
+      "score": "1:0",
+      "away": "爱尔兰",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "爱尔兰",
+      "score": "1:1",
+      "away": "以色列",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "爱尔兰",
+      "score": "2:2",
+      "away": "奥地利",
+      "venue": "主",
+      "gf": 2,
+      "ga": 2
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "以色列",
+      "score": "0:3",
+      "away": "爱尔兰",
+      "venue": "客",
+      "gf": 3,
+      "ga": 0
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "科索沃",
+      "score": "1:0",
+      "away": "爱尔兰",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-06-06",
+      "league": "足球友谊赛",
+      "home": "加拿大",
+      "score": "1:1",
+      "away": "爱尔兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-14",
+      "league": "欧国联",
+      "home": "科索沃",
+      "score": "0:0",
+      "away": "以色列",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-05",
+      "league": "欧国联",
+      "home": "科索沃",
+      "score": "1:1",
+      "away": "奥地利",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-02",
+      "league": "欧国联",
+      "home": "以色列",
+      "score": "0:0",
+      "away": "科索沃",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-09-28",
+      "league": "欧国联",
+      "home": "奥地利",
+      "score": "3:1",
+      "away": "科索沃",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home": "科索沃",
+      "score": "1:0",
+      "away": "爱尔兰",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-06-08",
+      "league": "国际友谊赛",
+      "home": "科索沃",
+      "score": "3:0",
+      "away": "安道尔",
+      "venue": "主",
+      "gf": 3,
+      "ga": 0
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "爱尔兰",
+      "games": "5",
+      "wdl": "1/2/2",
+      "goal": "6/5",
+      "point": "5"
+     },
+     {
+      "team": "科索沃",
+      "games": "5",
+      "wdl": "1/3/1",
+      "goal": "3/4",
+      "point": "6"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-25",
+      "league": "欧国联",
+      "home_team": "科索沃",
+      "score": "1:0",
+      "visit_team": "爱尔兰"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949634",
+   "league": "欧国联",
+   "round": "欧国联B4组第6轮",
+   "home": "波黑",
+   "away": "罗马尼亚",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_3261.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_228.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949634v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 72.8,
+    "draw": 16.2,
+    "away": 11.0,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949634v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949634.htm",
+    "lambda_home": 2.487,
+    "lambda_away": 0.863,
+    "mu_home": 1.909,
+    "mu_away": 1.0,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.33,
+    "home_ga": 1.33,
+    "away_gf": 1.17,
+    "away_ga": 2.5,
+    "base": 1.455,
+    "shrink": 0.5,
+    "attack_home": 0.958,
+    "defence_home": 0.958,
+    "attack_away": 0.901,
+    "defence_away": 1.359,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "瑞典",
+      "score": "3:2",
+      "away": "波黑",
+      "venue": "客",
+      "gf": 2,
+      "ga": 3
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "波黑",
+      "score": "1:0",
+      "away": "波兰",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "波黑",
+      "score": "1:1",
+      "away": "瑞典",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "罗马尼亚",
+      "score": "2:4",
+      "away": "波黑",
+      "venue": "客",
+      "gf": 4,
+      "ga": 2
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "波兰",
+      "score": "0:0",
+      "away": "波黑",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-07-02",
+      "league": "世界杯",
+      "home": "美国",
+      "score": "2:0",
+      "away": "波黑",
+      "venue": "客",
+      "gf": 0,
+      "ga": 2
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "罗马尼亚",
+      "score": "2:1",
+      "away": "波兰",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "罗马尼亚",
+      "score": "0:1",
+      "away": "瑞典",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "波兰",
+      "score": "6:0",
+      "away": "罗马尼亚",
+      "venue": "客",
+      "gf": 0,
+      "ga": 6
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "罗马尼亚",
+      "score": "2:4",
+      "away": "波黑",
+      "venue": "主",
+      "gf": 2,
+      "ga": 4
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "瑞典",
+      "score": "2:1",
+      "away": "罗马尼亚",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-06-07",
+      "league": "足球友谊赛",
+      "home": "罗马尼亚",
+      "score": "2:1",
+      "away": "威尔士",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "波黑",
+      "games": "5",
+      "wdl": "2/2/1",
+      "goal": "8/6",
+      "point": "8"
+     },
+     {
+      "team": "罗马尼亚",
+      "games": "5",
+      "wdl": "1/0/4",
+      "goal": "5/14",
+      "point": "3"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home_team": "罗马尼亚",
+      "score": "2:4",
+      "visit_team": "波黑"
+     },
+     {
+      "date": "25-11-16",
+      "league": "世欧预",
+      "home_team": "波黑",
+      "score": "3:1",
+      "visit_team": "罗马尼亚"
+     },
+     {
+      "date": "25-03-22",
+      "league": "世欧预",
+      "home_team": "罗马尼亚",
+      "score": "0:1",
+      "visit_team": "波黑"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949635",
+   "league": "欧国联",
+   "round": "欧国联B4组第6轮",
+   "home": "波兰",
+   "away": "瑞典",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_232.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_3264.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949635v.htm",
+   "analysis": [
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-16/6afab28fc23e9native.htm",
+     "title": "意媒：阿坎吉因肌肉疲劳离开瑞士队；泽林斯基可能出战瑞典",
+     "date": "2026-11-16",
+     "desc": "直播吧11月16日讯 “国米新闻网”援引了《米兰体育报》关于国米球员阿坎吉与泽林斯基的最新情况。 阿坎吉在瑞士0-0战平斯洛文尼亚的赛后离开了国家队集训营。由于瑞士队已提前锁定欧国联A级的升级资格，球队在后续比赛中无需再冒风险。 据《米兰体育报》透露，这位蓝黑军团后卫因肌肉疲劳被批准提前离队休养。 报道指出：“出于谨慎起见，阿坎吉将缺席对阵苏格兰的比赛，此役结果已不影响瑞士队的小组头名地位。",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-16 15:47",
+     "category": "伤停 / 人员"
+    }
+   ],
+   "winrate": null,
+   "estimate": {
+    "home": 67.4,
+    "draw": 19.1,
+    "away": 13.5,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949635v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949635.htm",
+    "lambda_home": 2.15,
+    "lambda_away": 0.841,
+    "mu_home": 2.091,
+    "mu_away": 0.818,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.67,
+    "home_ga": 1.33,
+    "away_gf": 1.67,
+    "away_ga": 1.33,
+    "base": 1.455,
+    "shrink": 0.5,
+    "attack_home": 1.073,
+    "defence_home": 0.958,
+    "attack_away": 1.073,
+    "defence_away": 0.958,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "罗马尼亚",
+      "score": "2:1",
+      "away": "波兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "波黑",
+      "score": "1:0",
+      "away": "波兰",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "波兰",
+      "score": "6:0",
+      "away": "罗马尼亚",
+      "venue": "主",
+      "gf": 6,
+      "ga": 0
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "瑞典",
+      "score": "3:1",
+      "away": "波兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "波兰",
+      "score": "0:0",
+      "away": "波黑",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-06-04",
+      "league": "足球友谊赛",
+      "home": "波兰",
+      "score": "2:2",
+      "away": "尼日利亚",
+      "venue": "主",
+      "gf": 2,
+      "ga": 2
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "瑞典",
+      "score": "3:2",
+      "away": "波黑",
+      "venue": "主",
+      "gf": 3,
+      "ga": 2
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "罗马尼亚",
+      "score": "0:1",
+      "away": "瑞典",
+      "venue": "客",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "波黑",
+      "score": "1:1",
+      "away": "瑞典",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "瑞典",
+      "score": "3:1",
+      "away": "波兰",
+      "venue": "主",
+      "gf": 3,
+      "ga": 1
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "瑞典",
+      "score": "2:1",
+      "away": "罗马尼亚",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-07-01",
+      "league": "世界杯",
+      "home": "法国",
+      "score": "3:0",
+      "away": "瑞典",
+      "venue": "客",
+      "gf": 0,
+      "ga": 3
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "波兰",
+      "games": "5",
+      "wdl": "1/1/3",
+      "goal": "8/6",
+      "point": "4"
+     },
+     {
+      "team": "瑞典",
+      "games": "5",
+      "wdl": "4/1/0",
+      "goal": "10/5",
+      "point": "13"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home_team": "瑞典",
+      "score": "3:1",
+      "visit_team": "波兰"
+     },
+     {
+      "date": "26-04-01",
+      "league": "世欧预",
+      "home_team": "瑞典",
+      "score": "3:2",
+      "visit_team": "波兰"
+     },
+     {
+      "date": "22-03-30",
+      "league": "世欧预",
+      "home_team": "波兰",
+      "score": "2:0",
+      "visit_team": "瑞典"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_1949636",
+   "league": "欧国联",
+   "round": "欧国联B2组第6轮",
+   "home": "乌克兰",
+   "away": "格鲁吉亚",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/team_235.png",
+    "https://duihui.duoduocdn.com/zuqiu/team_3272.png"
+   ],
+   "kickoff": "2026-11-18 03:45",
+   "date": "11-18",
+   "time": "03:45",
+   "weekday": "三",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949636v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 16.9,
+    "draw": 38.7,
+    "away": 44.4,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match1949636v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-18/1949636.htm",
+    "lambda_home": 0.417,
+    "lambda_away": 0.866,
+    "mu_home": 0.455,
+    "mu_away": 1.0,
+    "sample_games": 11,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 0.67,
+    "home_ga": 1.0,
+    "away_gf": 0.33,
+    "away_ga": 0.67,
+    "base": 0.727,
+    "shrink": 0.5,
+    "attack_home": 0.958,
+    "defence_home": 1.188,
+    "attack_away": 0.729,
+    "defence_away": 0.958,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "北爱尔兰",
+      "score": "1:0",
+      "away": "乌克兰",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "乌克兰",
+      "score": "1:2",
+      "away": "匈牙利",
+      "venue": "主",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "乌克兰",
+      "score": "0:3",
+      "away": "北爱尔兰",
+      "venue": "主",
+      "gf": 0,
+      "ga": 3
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "格鲁吉亚",
+      "score": "0:0",
+      "away": "乌克兰",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "匈牙利",
+      "score": "0:1",
+      "away": "乌克兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-05-31",
+      "league": "足球友谊赛",
+      "home": "波兰",
+      "score": "0:2",
+      "away": "乌克兰",
+      "venue": "客",
+      "gf": 2,
+      "ga": 0
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-15",
+      "league": "欧国联",
+      "home": "格鲁吉亚",
+      "score": "0:2",
+      "away": "匈牙利",
+      "venue": "主",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-10-06",
+      "league": "欧国联",
+      "home": "北爱尔兰",
+      "score": "0:0",
+      "away": "格鲁吉亚",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-03",
+      "league": "欧国联",
+      "home": "匈牙利",
+      "score": "1:0",
+      "away": "格鲁吉亚",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home": "格鲁吉亚",
+      "score": "0:0",
+      "away": "乌克兰",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-09-26",
+      "league": "欧国联",
+      "home": "格鲁吉亚",
+      "score": "0:1",
+      "away": "北爱尔兰",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-06-06",
+      "league": "足球友谊赛",
+      "home": "格鲁吉亚",
+      "score": "2:0",
+      "away": "巴林",
+      "venue": "主",
+      "gf": 2,
+      "ga": 0
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "乌克兰",
+      "games": "5",
+      "wdl": "1/1/3",
+      "goal": "2/6",
+      "point": "4"
+     },
+     {
+      "team": "格鲁吉亚",
+      "games": "5",
+      "wdl": "0/2/3",
+      "goal": "0/4",
+      "point": "2"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-09-29",
+      "league": "欧国联",
+      "home_team": "格鲁吉亚",
+      "score": "0:0",
+      "visit_team": "乌克兰"
+     },
+     {
+      "date": "24-11-17",
+      "league": "欧国联",
+      "home_team": "格鲁吉亚",
+      "score": "1:1",
+      "visit_team": "乌克兰"
+     },
+     {
+      "date": "24-10-12",
+      "league": "欧国联",
+      "home_team": "乌克兰",
+      "score": "1:0",
+      "visit_team": "格鲁吉亚"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2076834",
+   "league": "德甲",
+   "round": "德甲第10轮",
+   "home": "拜仁慕尼黑",
+   "away": "科隆",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_bairenmunihei_761216.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_kelong_269879.png"
+   ],
+   "kickoff": "2026-11-21 03:30",
+   "date": "11-21",
+   "time": "03:30",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2076834v.htm",
+   "analysis": [
+    {
+     "url": "https://news.zhibo8.com/zuqiu/2026-11-16/6afac5813ebb6native.htm",
+     "title": "记者：穆西亚拉将进入对阵科隆大名单，孔帕尼已批准他回归",
+     "date": "2026-11-16",
+     "desc": "直播吧11月16日讯 据记者Stefan Kumberger报道，穆西亚拉预计将进入拜仁对阵科隆的比赛名单。 穆西亚拉将在对阵科隆的比赛中回归大名单，前提是本周训练中伤情不再反复，穆西亚拉现在已经随队训练了十天，他的回归也已得到主帅孔帕尼的批准",
+     "source": "直播吧 · 足球资讯",
+     "time": "11-16 16:59",
+     "category": "首发 / 阵容"
+    }
+   ],
+   "winrate": null,
+   "estimate": {
+    "home": 56.5,
+    "draw": 21.9,
+    "away": 21.6,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2076834v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2076834.htm",
+    "lambda_home": 1.951,
+    "lambda_away": 1.127,
+    "mu_home": 1.833,
+    "mu_away": 1.333,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 2.83,
+    "home_ga": 1.17,
+    "away_gf": 1.5,
+    "away_ga": 0.83,
+    "base": 1.583,
+    "shrink": 0.5,
+    "attack_home": 1.395,
+    "defence_home": 0.868,
+    "attack_away": 0.974,
+    "defence_away": 0.763,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-07",
+      "league": "德甲",
+      "home": "美因茨",
+      "score": "1:2",
+      "away": "拜仁慕尼黑",
+      "venue": "客",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-11-04",
+      "league": "欧冠",
+      "home": "马德里竞技",
+      "score": "0:2",
+      "away": "拜仁慕尼黑",
+      "venue": "客",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-11-01",
+      "league": "德甲",
+      "home": "拜仁慕尼黑",
+      "score": "2:2",
+      "away": "多特蒙德",
+      "venue": "主",
+      "gf": 2,
+      "ga": 2
+     },
+     {
+      "date": "26-10-29",
+      "league": "德国杯",
+      "home": "拜仁慕尼黑",
+      "score": "6:1",
+      "away": "马格德堡",
+      "venue": "主",
+      "gf": 6,
+      "ga": 1
+     },
+     {
+      "date": "26-10-26",
+      "league": "德甲",
+      "home": "弗赖堡",
+      "score": "1:3",
+      "away": "拜仁慕尼黑",
+      "venue": "客",
+      "gf": 3,
+      "ga": 1
+     },
+     {
+      "date": "26-10-22",
+      "league": "欧冠",
+      "home": "拜仁慕尼黑",
+      "score": "2:2",
+      "away": "阿森纳",
+      "venue": "主",
+      "gf": 2,
+      "ga": 2
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-08",
+      "league": "德甲",
+      "home": "科隆",
+      "score": "1:2",
+      "away": "勒沃库森",
+      "venue": "主",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-11-01",
+      "league": "德甲",
+      "home": "柏林联合",
+      "score": "1:1",
+      "away": "科隆",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-28",
+      "league": "德国杯",
+      "home": "科隆",
+      "score": "5:0",
+      "away": "柏林联合",
+      "venue": "主",
+      "gf": 5,
+      "ga": 0
+     },
+     {
+      "date": "26-10-24",
+      "league": "德甲",
+      "home": "科隆",
+      "score": "0:0",
+      "away": "沙尔克04",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-17",
+      "league": "德甲",
+      "home": "法兰克福",
+      "score": "1:0",
+      "away": "科隆",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-11",
+      "league": "德甲",
+      "home": "科隆",
+      "score": "2:1",
+      "away": "门兴",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "拜仁慕尼黑",
+      "games": "9",
+      "wdl": "6/3/0",
+      "goal": "29/9",
+      "point": "21"
+     },
+     {
+      "team": "科隆",
+      "games": "9",
+      "wdl": "2/3/4",
+      "goal": "10/14",
+      "point": "9"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-05-16",
+      "league": "德甲",
+      "home_team": "拜仁慕尼黑",
+      "score": "5:1",
+      "visit_team": "科隆"
+     },
+     {
+      "date": "26-01-15",
+      "league": "德甲",
+      "home_team": "科隆",
+      "score": "1:3",
+      "visit_team": "拜仁慕尼黑"
+     },
+     {
+      "date": "25-10-30",
+      "league": "德国杯",
+      "home_team": "科隆",
+      "score": "1:4",
+      "visit_team": "拜仁慕尼黑"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2059574",
+   "league": "法甲",
+   "round": "法甲第11轮",
+   "home": "特鲁瓦",
+   "away": "勒阿弗尔",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_teluwa_744019.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_leiafuer_711084.png"
+   ],
+   "kickoff": "2026-11-21 03:45",
+   "date": "11-21",
+   "time": "03:45",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2059574v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 36.0,
+    "draw": 23.4,
+    "away": 40.6,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2059574v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2059574.htm",
+    "lambda_home": 1.544,
+    "lambda_away": 1.654,
+    "mu_home": 1.583,
+    "mu_away": 1.75,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 0.83,
+    "home_ga": 1.33,
+    "away_gf": 1.83,
+    "away_ga": 2.67,
+    "base": 1.667,
+    "shrink": 0.5,
+    "attack_home": 0.75,
+    "defence_home": 0.9,
+    "attack_away": 1.05,
+    "defence_away": 1.3,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-08",
+      "league": "法甲",
+      "home": "巴黎圣日耳曼",
+      "score": "1:0",
+      "away": "特鲁瓦",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-11-01",
+      "league": "法甲",
+      "home": "特鲁瓦",
+      "score": "2:0",
+      "away": "勒芒",
+      "venue": "主",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-10-26",
+      "league": "法甲",
+      "home": "图卢兹",
+      "score": "0:0",
+      "away": "特鲁瓦",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-18",
+      "league": "法甲",
+      "home": "特鲁瓦",
+      "score": "1:3",
+      "away": "朗斯",
+      "venue": "主",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-10-12",
+      "league": "法甲",
+      "home": "特鲁瓦",
+      "score": "0:2",
+      "away": "马赛",
+      "venue": "主",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-10-03",
+      "league": "球会友谊",
+      "home": "第戎",
+      "score": "2:2",
+      "away": "特鲁瓦",
+      "venue": "客",
+      "gf": 2,
+      "ga": 2
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-09",
+      "league": "法甲",
+      "home": "勒阿弗尔",
+      "score": "0:2",
+      "away": "洛里昂",
+      "venue": "主",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-10-31",
+      "league": "法甲",
+      "home": "勒阿弗尔",
+      "score": "1:5",
+      "away": "巴黎圣日耳曼",
+      "venue": "主",
+      "gf": 1,
+      "ga": 5
+     },
+     {
+      "date": "26-10-26",
+      "league": "法甲",
+      "home": "马赛",
+      "score": "4:3",
+      "away": "勒阿弗尔",
+      "venue": "客",
+      "gf": 3,
+      "ga": 4
+     },
+     {
+      "date": "26-10-18",
+      "league": "法甲",
+      "home": "勒阿弗尔",
+      "score": "1:3",
+      "away": "欧塞尔",
+      "venue": "主",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-10-10",
+      "league": "法甲",
+      "home": "里尔",
+      "score": "1:0",
+      "away": "勒阿弗尔",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-02",
+      "league": "球会友谊",
+      "home": "勒阿弗尔",
+      "score": "6:1",
+      "away": "布洛涅",
+      "venue": "主",
+      "gf": 6,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "特鲁瓦",
+      "games": "10",
+      "wdl": "2/2/6",
+      "goal": "7/17",
+      "point": "8"
+     },
+     {
+      "team": "勒阿弗尔",
+      "games": "10",
+      "wdl": "0/2/8",
+      "goal": "9/22",
+      "point": "2"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "22-07-20",
+      "league": "球会友谊",
+      "home_team": "特鲁瓦",
+      "score": "3:0",
+      "visit_team": "勒阿弗尔"
+     },
+     {
+      "date": "21-05-16",
+      "league": "法乙",
+      "home_team": "勒阿弗尔",
+      "score": "3:2",
+      "visit_team": "特鲁瓦"
+     },
+     {
+      "date": "20-08-25",
+      "league": "法乙",
+      "home_team": "特鲁瓦",
+      "score": "2:0",
+      "visit_team": "勒阿弗尔"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2075532",
+   "league": "西甲",
+   "round": "西甲第13轮",
+   "home": "毕尔巴鄂竞技",
+   "away": "西班牙人",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_bierbaejingji_875398.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_xibanyaren_183198.png"
+   ],
+   "kickoff": "2026-11-21 04:00",
+   "date": "11-21",
+   "time": "04:00",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2075532v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 55.0,
+    "draw": 24.4,
+    "away": 20.6,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2075532v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2075532.htm",
+    "lambda_home": 1.66,
+    "lambda_away": 0.912,
+    "mu_home": 1.333,
+    "mu_away": 1.25,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 2.33,
+    "home_ga": 1.0,
+    "away_gf": 0.83,
+    "away_ga": 1.0,
+    "base": 1.292,
+    "shrink": 0.5,
+    "attack_home": 1.403,
+    "defence_home": 0.887,
+    "attack_away": 0.823,
+    "defence_away": 0.887,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-08",
+      "league": "西甲",
+      "home": "奥萨苏纳",
+      "score": "1:1",
+      "away": "毕尔巴鄂竞技",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-11-02",
+      "league": "西甲",
+      "home": "毕尔巴鄂竞技",
+      "score": "2:1",
+      "away": "皇家社会",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-30",
+      "league": "国王杯",
+      "home": "普拉特",
+      "score": "1:6",
+      "away": "毕尔巴鄂竞技",
+      "venue": "客",
+      "gf": 6,
+      "ga": 1
+     },
+     {
+      "date": "26-10-25",
+      "league": "西甲",
+      "home": "毕尔巴鄂竞技",
+      "score": "4:0",
+      "away": "赫塔费",
+      "venue": "主",
+      "gf": 4,
+      "ga": 0
+     },
+     {
+      "date": "26-10-22",
+      "league": "西甲",
+      "home": "莱万特",
+      "score": "3:1",
+      "away": "毕尔巴鄂竞技",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-10-18",
+      "league": "西甲",
+      "home": "瓦伦西亚",
+      "score": "0:0",
+      "away": "毕尔巴鄂竞技",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-07",
+      "league": "西甲",
+      "home": "西班牙人",
+      "score": "0:0",
+      "away": "拉科鲁尼亚",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-31",
+      "league": "西甲",
+      "home": "比利亚雷亚尔",
+      "score": "0:1",
+      "away": "西班牙人",
+      "venue": "客",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-28",
+      "league": "国王杯",
+      "home": "施斯达奧",
+      "score": "2:2",
+      "away": "西班牙人",
+      "venue": "客",
+      "gf": 2,
+      "ga": 2
+     },
+     {
+      "date": "26-10-24",
+      "league": "西甲",
+      "home": "桑坦德竞技",
+      "score": "2:1",
+      "away": "西班牙人",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-17",
+      "league": "西甲",
+      "home": "西班牙人",
+      "score": "0:1",
+      "away": "马德里竞技",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-10",
+      "league": "西甲",
+      "home": "马拉加",
+      "score": "1:1",
+      "away": "西班牙人",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "毕尔巴鄂竞技",
+      "games": "11",
+      "wdl": "4/4/3",
+      "goal": "15/11",
+      "point": "16"
+     },
+     {
+      "team": "西班牙人",
+      "games": "12",
+      "wdl": "3/3/6",
+      "goal": "13/14",
+      "point": "12"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-05-14",
+      "league": "西甲",
+      "home_team": "西班牙人",
+      "score": "2:0",
+      "visit_team": "毕尔巴鄂竞技"
+     },
+     {
+      "date": "25-12-23",
+      "league": "西甲",
+      "home_team": "毕尔巴鄂竞技",
+      "score": "1:2",
+      "visit_team": "西班牙人"
+     },
+     {
+      "date": "25-02-16",
+      "league": "西甲",
+      "home_team": "西班牙人",
+      "score": "1:1",
+      "visit_team": "毕尔巴鄂竞技"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2067735",
+   "league": "英超",
+   "round": "英超第11轮",
+   "home": "曼城",
+   "away": "富勒姆",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_mancheng_206114.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_fuleimu_056427.png"
+   ],
+   "kickoff": "2026-11-21 20:30",
+   "date": "11-21",
+   "time": "20:30",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2067735v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 48.1,
+    "draw": 25.3,
+    "away": 26.6,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2067735v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2067735.htm",
+    "lambda_home": 1.56,
+    "lambda_away": 1.093,
+    "mu_home": 1.583,
+    "mu_away": 1.167,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 2.0,
+    "home_ga": 1.83,
+    "away_gf": 0.83,
+    "away_ga": 0.83,
+    "base": 1.375,
+    "shrink": 0.5,
+    "attack_home": 1.227,
+    "defence_home": 1.167,
+    "attack_away": 0.803,
+    "defence_away": 0.803,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-08",
+      "league": "英超",
+      "home": "诺丁汉森林",
+      "score": "3:1",
+      "away": "曼城",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-11-05",
+      "league": "欧冠",
+      "home": "RB莱比锡",
+      "score": "2:3",
+      "away": "曼城",
+      "venue": "客",
+      "gf": 3,
+      "ga": 2
+     },
+     {
+      "date": "26-10-31",
+      "league": "英超",
+      "home": "曼城",
+      "score": "0:1",
+      "away": "布莱顿",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-29",
+      "league": "联赛杯",
+      "home": "曼城",
+      "score": "2:2",
+      "away": "布莱顿",
+      "venue": "主",
+      "gf": 2,
+      "ga": 2
+     },
+     {
+      "date": "26-10-24",
+      "league": "英超",
+      "home": "阿斯顿维拉",
+      "score": "2:1",
+      "away": "曼城",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-21",
+      "league": "欧冠",
+      "home": "曼城",
+      "score": "5:1",
+      "away": "雅典AEK",
+      "venue": "主",
+      "gf": 5,
+      "ga": 1
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-07",
+      "league": "英超",
+      "home": "富勒姆",
+      "score": "1:1",
+      "away": "纽卡斯尔联",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-11-01",
+      "league": "英超",
+      "home": "阿斯顿维拉",
+      "score": "1:1",
+      "away": "富勒姆",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-29",
+      "league": "联赛杯",
+      "home": "富勒姆",
+      "score": "0:1",
+      "away": "水晶宫",
+      "venue": "主",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-24",
+      "league": "英超",
+      "home": "考文垂",
+      "score": "0:1",
+      "away": "富勒姆",
+      "venue": "客",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-17",
+      "league": "英超",
+      "home": "富勒姆",
+      "score": "1:0",
+      "away": "赫尔城",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-10",
+      "league": "英超",
+      "home": "伊普斯维奇",
+      "score": "2:1",
+      "away": "富勒姆",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "曼城",
+      "games": "10",
+      "wdl": "7/0/3",
+      "goal": "21/13",
+      "point": "21"
+     },
+     {
+      "team": "富勒姆",
+      "games": "10",
+      "wdl": "2/4/4",
+      "goal": "10/12",
+      "point": "10"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-02-12",
+      "league": "英超",
+      "home_team": "曼城",
+      "score": "3:0",
+      "visit_team": "富勒姆"
+     },
+     {
+      "date": "25-12-03",
+      "league": "英超",
+      "home_team": "富勒姆",
+      "score": "4:5",
+      "visit_team": "曼城"
+     },
+     {
+      "date": "25-05-25",
+      "league": "英超",
+      "home_team": "富勒姆",
+      "score": "0:2",
+      "visit_team": "曼城"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2075523",
+   "league": "西甲",
+   "round": "西甲第13轮",
+   "home": "阿拉维斯",
+   "away": "拉科鲁尼亚",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_alaweisi_041258.png",
+    "https://duihui.duoduocdn.com/zuqiu/f24b6e95a522da6998f5d974c8afcdec.png"
+   ],
+   "kickoff": "2026-11-21 21:00",
+   "date": "11-21",
+   "time": "21:00",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2075523v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 30.6,
+    "draw": 24.1,
+    "away": 45.3,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2075523v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2075523.htm",
+    "lambda_home": 1.319,
+    "lambda_away": 1.653,
+    "mu_home": 1.5,
+    "mu_away": 1.5,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.67,
+    "home_ga": 2.0,
+    "away_gf": 1.33,
+    "away_ga": 1.0,
+    "base": 1.5,
+    "shrink": 0.5,
+    "attack_home": 1.056,
+    "defence_home": 1.167,
+    "attack_away": 0.944,
+    "defence_away": 0.833,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-11",
+      "league": "国王杯",
+      "home": "CD阿纳塔苏纳",
+      "score": "1:6",
+      "away": "阿拉维斯",
+      "venue": "客",
+      "gf": 6,
+      "ga": 1
+     },
+     {
+      "date": "26-11-07",
+      "league": "西甲",
+      "home": "塞维利亚",
+      "score": "0:0",
+      "away": "阿拉维斯",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-11-01",
+      "league": "西甲",
+      "home": "巴塞罗那",
+      "score": "6:1",
+      "away": "阿拉维斯",
+      "venue": "客",
+      "gf": 1,
+      "ga": 6
+     },
+     {
+      "date": "26-10-24",
+      "league": "西甲",
+      "home": "阿拉维斯",
+      "score": "1:1",
+      "away": "马拉加",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-18",
+      "league": "西甲",
+      "home": "塞尔塔",
+      "score": "2:1",
+      "away": "阿拉维斯",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-10",
+      "league": "西甲",
+      "home": "阿拉维斯",
+      "score": "1:2",
+      "away": "马德里竞技",
+      "venue": "主",
+      "gf": 1,
+      "ga": 2
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-07",
+      "league": "西甲",
+      "home": "西班牙人",
+      "score": "0:0",
+      "away": "拉科鲁尼亚",
+      "venue": "客",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-11-03",
+      "league": "西甲",
+      "home": "拉科鲁尼亚",
+      "score": "2:1",
+      "away": "奥萨苏纳",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-30",
+      "league": "国王杯",
+      "home": "奥伦塞",
+      "score": "0:3",
+      "away": "拉科鲁尼亚",
+      "venue": "客",
+      "gf": 3,
+      "ga": 0
+     },
+     {
+      "date": "26-10-25",
+      "league": "西甲",
+      "home": "马德里竞技",
+      "score": "1:0",
+      "away": "拉科鲁尼亚",
+      "venue": "客",
+      "gf": 0,
+      "ga": 1
+     },
+     {
+      "date": "26-10-17",
+      "league": "西甲",
+      "home": "拉科鲁尼亚",
+      "score": "1:1",
+      "away": "莱万特",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-11",
+      "league": "西甲",
+      "home": "皇家社会",
+      "score": "3:2",
+      "away": "拉科鲁尼亚",
+      "venue": "客",
+      "gf": 2,
+      "ga": 3
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:09",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "阿拉维斯",
+      "games": "12",
+      "wdl": "3/4/5",
+      "goal": "15/17",
+      "point": "13"
+     },
+     {
+      "team": "拉科鲁尼亚",
+      "games": "12",
+      "wdl": "3/6/3",
+      "goal": "15/14",
+      "point": "15"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "21-01-07",
+      "league": "国王杯",
+      "home_team": "拉科鲁尼亚",
+      "score": "0:1",
+      "visit_team": "阿拉维斯"
+     },
+     {
+      "date": "18-02-18",
+      "league": "西甲",
+      "home_team": "阿拉维斯",
+      "score": "1:0",
+      "visit_team": "拉科鲁尼亚"
+     },
+     {
+      "date": "17-09-21",
+      "league": "西甲",
+      "home_team": "拉科鲁尼亚",
+      "score": "1:0",
+      "visit_team": "阿拉维斯"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2057498",
+   "league": "意甲",
+   "round": "意甲第12轮",
+   "home": "拉齐奥",
+   "away": "莱切",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_laqiao_136891.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_laiqie_909519.png"
+   ],
+   "kickoff": "2026-11-21 22:00",
+   "date": "11-21",
+   "time": "22:00",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2057498v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 55.7,
+    "draw": 20.9,
+    "away": 23.4,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2057498v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2057498.htm",
+    "lambda_home": 2.105,
+    "lambda_away": 1.31,
+    "mu_home": 1.5,
+    "mu_away": 2.0,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 2.83,
+    "home_ga": 1.0,
+    "away_gf": 1.17,
+    "away_ga": 2.0,
+    "base": 1.75,
+    "shrink": 0.5,
+    "attack_home": 1.31,
+    "defence_home": 0.786,
+    "attack_away": 0.833,
+    "defence_away": 1.071,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-08",
+      "league": "意甲",
+      "home": "那不勒斯",
+      "score": "1:1",
+      "away": "拉齐奥",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-11-01",
+      "league": "意甲",
+      "home": "拉齐奥",
+      "score": "2:1",
+      "away": "卡利亚里",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-28",
+      "league": "意甲",
+      "home": "萨索洛",
+      "score": "2:6",
+      "away": "拉齐奥",
+      "venue": "客",
+      "gf": 6,
+      "ga": 2
+     },
+     {
+      "date": "26-10-25",
+      "league": "意甲",
+      "home": "拉齐奥",
+      "score": "2:1",
+      "away": "帕尔马",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-19",
+      "league": "意甲",
+      "home": "尤文图斯",
+      "score": "0:3",
+      "away": "拉齐奥",
+      "venue": "客",
+      "gf": 3,
+      "ga": 0
+     },
+     {
+      "date": "26-10-11",
+      "league": "意甲",
+      "home": "拉齐奥",
+      "score": "3:1",
+      "away": "蒙扎",
+      "venue": "主",
+      "gf": 3,
+      "ga": 1
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-07",
+      "league": "意甲",
+      "home": "都灵",
+      "score": "1:1",
+      "away": "莱切",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-11-02",
+      "league": "意甲",
+      "home": "莱切",
+      "score": "1:2",
+      "away": "热那亚",
+      "venue": "主",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-30",
+      "league": "意甲",
+      "home": "弗洛西诺内",
+      "score": "5:1",
+      "away": "莱切",
+      "venue": "客",
+      "gf": 1,
+      "ga": 5
+     },
+     {
+      "date": "26-10-26",
+      "league": "意甲",
+      "home": "莱切",
+      "score": "0:2",
+      "away": "尤文图斯",
+      "venue": "主",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-10-18",
+      "league": "意甲",
+      "home": "乌迪内斯",
+      "score": "0:3",
+      "away": "莱切",
+      "venue": "客",
+      "gf": 3,
+      "ga": 0
+     },
+     {
+      "date": "26-10-11",
+      "league": "意甲",
+      "home": "莱切",
+      "score": "1:2",
+      "away": "博洛尼亚",
+      "venue": "主",
+      "gf": 1,
+      "ga": 2
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:08",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "拉齐奥",
+      "games": "11",
+      "wdl": "9/2/0",
+      "goal": "25/9",
+      "point": "29"
+     },
+     {
+      "team": "莱切",
+      "games": "11",
+      "wdl": "3/1/7",
+      "goal": "12/22",
+      "point": "10"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-01-25",
+      "league": "意甲",
+      "home_team": "莱切",
+      "score": "0:0",
+      "visit_team": "拉齐奥"
+     },
+     {
+      "date": "25-11-24",
+      "league": "意甲",
+      "home_team": "拉齐奥",
+      "score": "2:0",
+      "visit_team": "莱切"
+     },
+     {
+      "date": "25-05-26",
+      "league": "意甲",
+      "home_team": "拉齐奥",
+      "score": "0:1",
+      "visit_team": "莱切"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2057497",
+   "league": "意甲",
+   "round": "意甲第12轮",
+   "home": "科莫",
+   "away": "卡利亚里",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_kemo_108234.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_kaliyali_741269.png"
+   ],
+   "kickoff": "2026-11-21 22:00",
+   "date": "11-21",
+   "time": "22:00",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2057497v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 80.2,
+    "draw": 12.2,
+    "away": 7.6,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2057497v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2057497.htm",
+    "lambda_home": 3.013,
+    "lambda_away": 0.863,
+    "mu_home": 1.917,
+    "mu_away": 1.583,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 3.17,
+    "home_ga": 0.83,
+    "away_gf": 0.83,
+    "away_ga": 2.17,
+    "base": 1.75,
+    "shrink": 0.5,
+    "attack_home": 1.405,
+    "defence_home": 0.738,
+    "attack_away": 0.738,
+    "defence_away": 1.119,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-09",
+      "league": "意甲",
+      "home": "国际米兰",
+      "score": "2:0",
+      "away": "科莫",
+      "venue": "客",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-11-05",
+      "league": "欧冠",
+      "home": "朗斯",
+      "score": "1:9",
+      "away": "科莫",
+      "venue": "客",
+      "gf": 9,
+      "ga": 1
+     },
+     {
+      "date": "26-11-01",
+      "league": "意甲",
+      "home": "科莫",
+      "score": "1:0",
+      "away": "威尼斯",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-28",
+      "league": "意甲",
+      "home": "都灵",
+      "score": "1:3",
+      "away": "科莫",
+      "venue": "客",
+      "gf": 3,
+      "ga": 1
+     },
+     {
+      "date": "26-10-24",
+      "league": "意甲",
+      "home": "科莫",
+      "score": "2:0",
+      "away": "萨索洛",
+      "venue": "主",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-10-22",
+      "league": "欧冠",
+      "home": "科莫",
+      "score": "4:1",
+      "away": "曼联",
+      "venue": "主",
+      "gf": 4,
+      "ga": 1
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-07",
+      "league": "意甲",
+      "home": "卡利亚里",
+      "score": "1:0",
+      "away": "弗洛西诺内",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-11-01",
+      "league": "意甲",
+      "home": "拉齐奥",
+      "score": "2:1",
+      "away": "卡利亚里",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-28",
+      "league": "意甲",
+      "home": "罗马",
+      "score": "4:2",
+      "away": "卡利亚里",
+      "venue": "客",
+      "gf": 2,
+      "ga": 4
+     },
+     {
+      "date": "26-10-24",
+      "league": "意甲",
+      "home": "卡利亚里",
+      "score": "0:2",
+      "away": "博洛尼亚",
+      "venue": "主",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-10-20",
+      "league": "意甲",
+      "home": "蒙扎",
+      "score": "4:0",
+      "away": "卡利亚里",
+      "venue": "客",
+      "gf": 0,
+      "ga": 4
+     },
+     {
+      "date": "26-10-12",
+      "league": "意甲",
+      "home": "卡利亚里",
+      "score": "1:1",
+      "away": "尤文图斯",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:09",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "科莫",
+      "games": "11",
+      "wdl": "7/2/2",
+      "goal": "18/10",
+      "point": "23"
+     },
+     {
+      "team": "卡利亚里",
+      "games": "11",
+      "wdl": "5/1/5",
+      "goal": "10/15",
+      "point": "16"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-03-07",
+      "league": "意甲",
+      "home_team": "卡利亚里",
+      "score": "1:2",
+      "visit_team": "科莫"
+     },
+     {
+      "date": "25-11-08",
+      "league": "意甲",
+      "home_team": "科莫",
+      "score": "0:0",
+      "visit_team": "卡利亚里"
+     },
+     {
+      "date": "25-05-10",
+      "league": "意甲",
+      "home_team": "科莫",
+      "score": "3:1",
+      "visit_team": "卡利亚里"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2076839",
+   "league": "德甲",
+   "round": "德甲第10轮",
+   "home": "门兴",
+   "away": "多特蒙德",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_menxinggeladebahe_580638.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_duotemengde_328473.png"
+   ],
+   "kickoff": "2026-11-21 22:30",
+   "date": "11-21",
+   "time": "22:30",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2076839v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 41.7,
+    "draw": 25.4,
+    "away": 32.9,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2076839v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2076839.htm",
+    "lambda_home": 1.475,
+    "lambda_away": 1.283,
+    "mu_home": 1.667,
+    "mu_away": 1.167,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.33,
+    "home_ga": 1.17,
+    "away_gf": 2.0,
+    "away_ga": 1.17,
+    "base": 1.417,
+    "shrink": 0.5,
+    "attack_home": 0.971,
+    "defence_home": 0.912,
+    "attack_away": 1.206,
+    "defence_away": 0.912,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-12",
+      "league": "足球友谊赛",
+      "home": "门兴",
+      "score": "1:0",
+      "away": "标准列日",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-11-07",
+      "league": "德甲",
+      "home": "汉堡",
+      "score": "3:1",
+      "away": "门兴",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-10-31",
+      "league": "德甲",
+      "home": "门兴",
+      "score": "0:0",
+      "away": "帕德博恩",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-28",
+      "league": "德国杯",
+      "home": "门兴",
+      "score": "2:0",
+      "away": "卡尔斯鲁厄",
+      "venue": "主",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-10-24",
+      "league": "德甲",
+      "home": "斯图加特",
+      "score": "2:3",
+      "away": "门兴",
+      "venue": "客",
+      "gf": 3,
+      "ga": 2
+     },
+     {
+      "date": "26-10-18",
+      "league": "德甲",
+      "home": "门兴",
+      "score": "1:2",
+      "away": "霍芬海姆",
+      "venue": "主",
+      "gf": 1,
+      "ga": 2
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-07",
+      "league": "德甲",
+      "home": "多特蒙德",
+      "score": "2:1",
+      "away": "埃尔沃斯贝格",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-11-05",
+      "league": "欧冠",
+      "home": "多特蒙德",
+      "score": "2:1",
+      "away": "皇家贝蒂斯",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-11-01",
+      "league": "德甲",
+      "home": "拜仁慕尼黑",
+      "score": "2:2",
+      "away": "多特蒙德",
+      "venue": "客",
+      "gf": 2,
+      "ga": 2
+     },
+     {
+      "date": "26-10-28",
+      "league": "德国杯",
+      "home": "多特蒙德",
+      "score": "3:2",
+      "away": "不莱梅",
+      "venue": "主",
+      "gf": 3,
+      "ga": 2
+     },
+     {
+      "date": "26-10-25",
+      "league": "德甲",
+      "home": "多特蒙德",
+      "score": "1:0",
+      "away": "法兰克福",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-10-21",
+      "league": "欧冠",
+      "home": "沙巴巴库",
+      "score": "1:2",
+      "away": "多特蒙德",
+      "venue": "客",
+      "gf": 2,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:09",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "门兴",
+      "games": "9",
+      "wdl": "1/1/7",
+      "goal": "12/25",
+      "point": "4"
+     },
+     {
+      "team": "多特蒙德",
+      "games": "9",
+      "wdl": "6/3/0",
+      "goal": "16/7",
+      "point": "21"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-05-03",
+      "league": "德甲",
+      "home_team": "门兴",
+      "score": "1:0",
+      "visit_team": "多特蒙德"
+     },
+     {
+      "date": "25-12-20",
+      "league": "德甲",
+      "home_team": "多特蒙德",
+      "score": "2:0",
+      "visit_team": "门兴"
+     },
+     {
+      "date": "25-04-20",
+      "league": "德甲",
+      "home_team": "多特蒙德",
+      "score": "3:2",
+      "visit_team": "门兴"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2067729",
+   "league": "英超",
+   "round": "英超第11轮",
+   "home": "阿斯顿维拉",
+   "away": "桑德兰",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_asidunweila_323305.png",
+    "https://duihui.duoduocdn.com/zuqiu/a4caa82eefdbc87cea0c0100da93bd18.png"
+   ],
+   "kickoff": "2026-11-21 23:00",
+   "date": "11-21",
+   "time": "23:00",
+   "weekday": "六",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2067729v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 57.5,
+    "draw": 21.9,
+    "away": 20.6,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2067729v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-21/2067729.htm",
+    "lambda_home": 1.94,
+    "lambda_away": 1.074,
+    "mu_home": 2.0,
+    "mu_away": 1.083,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 1.67,
+    "home_ga": 2.17,
+    "away_gf": 1.0,
+    "away_ga": 1.33,
+    "base": 1.542,
+    "shrink": 0.5,
+    "attack_home": 1.041,
+    "defence_home": 1.203,
+    "attack_away": 0.824,
+    "defence_away": 0.932,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-09",
+      "league": "英超",
+      "home": "曼联",
+      "score": "4:4",
+      "away": "阿斯顿维拉",
+      "venue": "客",
+      "gf": 4,
+      "ga": 4
+     },
+     {
+      "date": "26-11-04",
+      "league": "欧冠",
+      "home": "巴塞罗那",
+      "score": "3:0",
+      "away": "阿斯顿维拉",
+      "venue": "客",
+      "gf": 0,
+      "ga": 3
+     },
+     {
+      "date": "26-11-01",
+      "league": "英超",
+      "home": "阿斯顿维拉",
+      "score": "1:1",
+      "away": "富勒姆",
+      "venue": "主",
+      "gf": 1,
+      "ga": 1
+     },
+     {
+      "date": "26-10-29",
+      "league": "联赛杯",
+      "home": "伯恩茅斯",
+      "score": "3:0",
+      "away": "阿斯顿维拉",
+      "venue": "客",
+      "gf": 0,
+      "ga": 3
+     },
+     {
+      "date": "26-10-24",
+      "league": "英超",
+      "home": "阿斯顿维拉",
+      "score": "2:1",
+      "away": "曼城",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-22",
+      "league": "欧冠",
+      "home": "阿斯顿维拉",
+      "score": "3:1",
+      "away": "维京",
+      "venue": "主",
+      "gf": 3,
+      "ga": 1
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-08",
+      "league": "英超",
+      "home": "桑德兰",
+      "score": "1:0",
+      "away": "切尔西",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-11-06",
+      "league": "欧联杯",
+      "home": "桑德兰",
+      "score": "0:2",
+      "away": "萨格勒布迪纳摩",
+      "venue": "主",
+      "gf": 0,
+      "ga": 2
+     },
+     {
+      "date": "26-10-31",
+      "league": "英超",
+      "home": "考文垂",
+      "score": "3:1",
+      "away": "桑德兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 3
+     },
+     {
+      "date": "26-10-29",
+      "league": "联赛杯",
+      "home": "桑德兰",
+      "score": "3:2",
+      "away": "布伦特福德",
+      "venue": "主",
+      "gf": 3,
+      "ga": 2
+     },
+     {
+      "date": "26-10-26",
+      "league": "英超",
+      "home": "桑德兰",
+      "score": "0:0",
+      "away": "利兹联",
+      "venue": "主",
+      "gf": 0,
+      "ga": 0
+     },
+     {
+      "date": "26-10-23",
+      "league": "欧联杯",
+      "home": "波兹南莱赫",
+      "score": "1:1",
+      "away": "桑德兰",
+      "venue": "客",
+      "gf": 1,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:09",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "阿斯顿维拉",
+      "games": "10",
+      "wdl": "3/4/3",
+      "goal": "14/17",
+      "point": "13"
+     },
+     {
+      "team": "桑德兰",
+      "games": "10",
+      "wdl": "2/2/6",
+      "goal": "8/17",
+      "point": "8"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-04-19",
+      "league": "英超",
+      "home_team": "阿斯顿维拉",
+      "score": "4:3",
+      "visit_team": "桑德兰"
+     },
+     {
+      "date": "25-09-21",
+      "league": "英超",
+      "home_team": "桑德兰",
+      "score": "1:1",
+      "visit_team": "阿斯顿维拉"
+     },
+     {
+      "date": "18-03-07",
+      "league": "英冠",
+      "home_team": "桑德兰",
+      "score": "0:3",
+      "visit_team": "阿斯顿维拉"
+     }
+    ]
+   },
+   "estimate_status": ""
+  },
+  {
+   "id": "fx_2059571",
+   "league": "法甲",
+   "round": "法甲第11轮",
+   "home": "尼斯",
+   "away": "巴黎圣日耳曼",
+   "logos": [
+    "https://duihui.duoduocdn.com/zuqiu/zq_nisi_522462.png",
+    "https://duihui.duoduocdn.com/zuqiu/zq_balishengrierman_865365.png"
+   ],
+   "kickoff": "2026-11-22 00:15",
+   "date": "11-22",
+   "time": "00:15",
+   "weekday": "日",
+   "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2059571v.htm",
+   "analysis": [],
+   "winrate": null,
+   "estimate": {
+    "home": 20.0,
+    "draw": 19.0,
+    "away": 61.0,
+    "method": "等权近 6 场泊松进球模型（含固定小样本收缩，无拟合参数）",
+    "source": "直播吧比赛页 · 官方赛前数据「最近战绩」",
+    "source_url": "https://www.zhibo8.com/zhibo/zuqiu/2026/match2059571v.htm",
+    "data_url": "https://data.qiumibao.com/pre_match_data/v1/2026-11-22/2059571.htm",
+    "lambda_home": 1.308,
+    "lambda_away": 2.368,
+    "mu_home": 1.75,
+    "mu_away": 2.083,
+    "sample_games": 12,
+    "home_games": 6,
+    "away_games": 6,
+    "home_gf": 2.33,
+    "home_ga": 1.17,
+    "away_gf": 3.5,
+    "away_ga": 0.67,
+    "base": 1.917,
+    "shrink": 0.5,
+    "attack_home": 1.109,
+    "defence_home": 0.804,
+    "attack_away": 1.413,
+    "defence_away": 0.674,
+    "extreme": false,
+    "recent_home": [
+     {
+      "date": "26-11-09",
+      "league": "法甲",
+      "home": "昂热",
+      "score": "0:2",
+      "away": "尼斯",
+      "venue": "客",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-10-31",
+      "league": "法甲",
+      "home": "尼斯",
+      "score": "5:2",
+      "away": "雷恩",
+      "venue": "主",
+      "gf": 5,
+      "ga": 2
+     },
+     {
+      "date": "26-10-24",
+      "league": "法甲",
+      "home": "布雷斯特",
+      "score": "1:2",
+      "away": "尼斯",
+      "venue": "客",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-10-19",
+      "league": "法甲",
+      "home": "里昂",
+      "score": "2:1",
+      "away": "尼斯",
+      "venue": "客",
+      "gf": 1,
+      "ga": 2
+     },
+     {
+      "date": "26-10-11",
+      "league": "法甲",
+      "home": "尼斯",
+      "score": "2:1",
+      "away": "斯特拉斯堡",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     },
+     {
+      "date": "26-09-20",
+      "league": "法甲",
+      "home": "尼斯",
+      "score": "2:1",
+      "away": "里尔",
+      "venue": "主",
+      "gf": 2,
+      "ga": 1
+     }
+    ],
+    "recent_away": [
+     {
+      "date": "26-11-08",
+      "league": "法甲",
+      "home": "巴黎圣日耳曼",
+      "score": "1:0",
+      "away": "特鲁瓦",
+      "venue": "主",
+      "gf": 1,
+      "ga": 0
+     },
+     {
+      "date": "26-11-04",
+      "league": "欧冠",
+      "home": "比利亚雷亚尔",
+      "score": "0:6",
+      "away": "巴黎圣日耳曼",
+      "venue": "客",
+      "gf": 6,
+      "ga": 0
+     },
+     {
+      "date": "26-10-31",
+      "league": "法甲",
+      "home": "勒阿弗尔",
+      "score": "1:5",
+      "away": "巴黎圣日耳曼",
+      "venue": "客",
+      "gf": 5,
+      "ga": 1
+     },
+     {
+      "date": "26-10-27",
+      "league": "法甲",
+      "home": "巴黎圣日耳曼",
+      "score": "2:0",
+      "away": "里昂",
+      "venue": "主",
+      "gf": 2,
+      "ga": 0
+     },
+     {
+      "date": "26-10-21",
+      "league": "欧冠",
+      "home": "巴黎圣日耳曼",
+      "score": "4:2",
+      "away": "巴塞罗那",
+      "venue": "主",
+      "gf": 4,
+      "ga": 2
+     },
+     {
+      "date": "26-10-17",
+      "league": "法甲",
+      "home": "斯特拉斯堡",
+      "score": "1:3",
+      "away": "巴黎圣日耳曼",
+      "venue": "客",
+      "gf": 3,
+      "ga": 1
+     }
+    ],
+    "generated_at": "2026-11-16 20:14:09",
+    "formula": "样本：两队近 6 场真实比分去重；mu主/客为样本内主队、客队场均进球，base=(mu主+mu客)/2。强度按固定系数 0.5 折半回归：attack=0.5+0.5×(场均进球/base)，defence=0.5+0.5×(场均失球/base)。λ主=mu主×attack主×defence客，λ客=mu客×attack客×defence主；最后对 0–9 球的联合泊松分布汇总胜 / 平 / 负并归一化到 100%。",
+    "warning": "这是本站按公开比分算出的模型估算，不是来源站公布的数据，不含伤停、首发、赛意与临场信息；样本含不同赛事（含友谊赛）。仅供参考，不构成投注建议。",
+    "official_points": [
+     {
+      "team": "尼斯",
+      "games": "10",
+      "wdl": "5/2/3",
+      "goal": "15/12",
+      "point": "17"
+     },
+     {
+      "team": "巴黎圣日耳曼",
+      "games": "10",
+      "wdl": "7/2/1",
+      "goal": "22/10",
+      "point": "23"
+     }
+    ],
+    "head_to_head": [
+     {
+      "date": "26-03-22",
+      "league": "法甲",
+      "home_team": "尼斯",
+      "score": "0:4",
+      "visit_team": "巴黎圣日耳曼"
+     },
+     {
+      "date": "25-11-02",
+      "league": "法甲",
+      "home_team": "巴黎圣日耳曼",
+      "score": "1:0",
+      "visit_team": "尼斯"
+     },
+     {
+      "date": "25-04-26",
+      "league": "法甲",
+      "home_team": "巴黎圣日耳曼",
+      "score": "1:3",
+      "visit_team": "尼斯"
      }
     ]
    },

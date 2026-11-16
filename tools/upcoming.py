@@ -33,13 +33,20 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPCOMING_JSON = paths.UPCOMING_JSON
 
 SCHEDULE_URL = "https://www.zhibo8.com/"
+MOBILE_SCHEDULE_URL = "https://m.zhibo8.com/"   # 移动首页：国际比赛日里仍排五大联赛未来赛程
 NEWS_URL = "https://news.zhibo8.com/zuqiu/"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
 
-MAX_FIXTURES = 24          # 最多展示多少场
+MAX_FIXTURES = 24          # 最多展示多少场（非国际比赛日）
 DAYS_AHEAD = 7             # 只看未来 7 天
 MAX_ANALYSIS_PER_MATCH = 4 # 每场最多挂几条赛前报道
+
+# 国际比赛日：桌面首页只有欧国联，联赛要另从移动首页补。
+# 总量目标 24-28 场：欧国联之外的名额留给五大联赛，各联赛轮流取，避免被单一联赛占满。
+INTL_MAX_FIXTURES = 28     # 国际比赛日的总量上限
+INTL_LEAGUE_SLOTS = 10     # 最多补多少场联赛（约 18 场欧国联 + 10 = 28）
+CLUB_LEAGUES = ("英超", "西甲", "意甲", "德甲", "法甲")
 
 LEAGUE_RULES = (
     ("欧冠", ("欧冠", "欧洲冠军联赛")),
@@ -150,6 +157,92 @@ def parse_schedule(page, now=None):
         })
     out.sort(key=lambda x: x["kickoff"])
     return out[:MAX_FIXTURES]
+
+
+# ------------------------- 国际比赛日：移动首页补五大联赛赛程
+# 桌面首页在国际比赛日窗口里只排国家队赛事（欧国联），五大联赛要 11/21 才恢复，
+# 桌面直播表还没挂出来。移动首页 m.zhibo8.com 则已排出未来两周的俱乐部赛程，
+# 条目结构：
+#   <li type="football" label="英超,曼城,富勒姆,足球,英超第11轮"
+#       href="/zhibo/zuqiu/2026/match2067735v.htm" id="saishi2067735" ...>
+#     <div class="time">20:30</div>
+#     <div class="team left-team">...<img data-original="//..." >
+#       <div class="team-name">曼城</div></div>
+#     <div class="item-center"><div class="s_name">英超第11轮</div></div>
+#     <div class="team right-team">...富勒姆...</div>
+#     <div class="remind"><a ... &time=2026-11-21 20:30&advance=5 ...>
+#   </li>
+# 开赛日期从 alarm 链接的 &time= 取（和 time 字段同一场，最可靠）。
+MOBILE_LI_RE = re.compile(
+    r'(<li[^>]*type="football"[^>]*?id="saishi(\d+)"[^>]*>)(.*?)</li>', re.S)
+
+
+def parse_mobile_schedule(page, now=None, limit=INTL_LEAGUE_SLOTS):
+    """从移动首页解析未来五大联赛赛程；各联赛轮流取，均衡且真实。"""
+    now = now or datetime.now()
+    horizon = now + timedelta(days=DAYS_AHEAD + 7)  # 国际比赛日往后多看一周（联赛 11/21 才恢复）
+    picked, seen = [], set()
+    for tag, pid, body in MOBILE_LI_RE.findall(page):
+        sn = re.search(r'class="s_name">([^<]+)</div>', body)
+        alarm = re.search(r'&time=(\d{4}-\d{2}-\d{2} \d{2}:\d{2})', body)
+        if not sn or not alarm:
+            continue
+        round_name = clean(sn.group(1))
+        # 联赛判定只认轮次文本（label 首词可能是「足球」或球队名，不可靠）
+        league = league_of(round_name, window=True)
+        if league not in CLUB_LEAGUES:
+            continue
+        try:
+            kick = datetime.strptime(alarm.group(1), "%Y-%m-%d %H:%M")
+        except ValueError:
+            continue
+        if kick < now or kick > horizon:
+            continue
+        tm = re.search(r'<div class="time">([^<]+)</div>', body)
+        names = re.findall(r'class="team-name">([^<]+)</div>', body)
+        if not tm or len(names) < 2:
+            continue
+        home, away = clean(names[0]), clean(names[1])
+        if not home or not away or home == away or len(home) > 18 or len(away) > 18:
+            continue
+        fid = "fx_" + pid
+        if fid in seen:
+            continue
+        seen.add(fid)
+        imgs = re.findall(r'data-original="([^"]+)"', body)
+        href = re.search(r'href="(/zhibo/zuqiu/[^"]+\.htm)"', tag)
+        picked.append({
+            "id": fid,
+            "league": league,
+            "round": round_name,
+            "home": home,
+            "away": away,
+            "logos": [("https:" + u if u.startswith("//") else u) for u in imgs[:2]],
+            "kickoff": kick.strftime("%Y-%m-%d %H:%M"),
+            "date": kick.strftime("%m-%d"),
+            "time": kick.strftime("%H:%M"),
+            "weekday": "一二三四五六日"[kick.weekday()],
+            "source_url": ("https://www.zhibo8.com" + href.group(1)) if href else "",
+            "analysis": [],
+        })
+
+    # 按开赛时间排序后，各联赛轮流取一场，取满 limit 为止（避免全是某一联赛）
+    picked.sort(key=lambda x: x["kickoff"])
+    queues = {lg: [x for x in picked if x["league"] == lg] for lg in CLUB_LEAGUES}
+    out, round_no = [], 0
+    while len(out) < limit:
+        added = False
+        for lg in CLUB_LEAGUES:
+            if len(out) >= limit:
+                break
+            if round_no < len(queues[lg]):
+                out.append(queues[lg][round_no])
+                added = True
+        if not added:
+            break
+        round_no += 1
+    out.sort(key=lambda x: x["kickoff"])
+    return out[:limit]
 
 
 # ---------------------------------------------------------------- 赛前分析
@@ -371,6 +464,7 @@ def load_cached():
 
 def fetch_upcoming():
     """抓赛程 + 真实赛前分析 + 官方胜率 + 本站模型估算；失败沿用上次结果。"""
+    window = _window_active()
     try:
         sched = _get(SCHEDULE_URL)
         fixtures = parse_schedule(sched)
@@ -382,6 +476,26 @@ def fetch_upcoming():
                     if x.get("kickoff", "") >= datetime.now().strftime("%Y-%m-%d %H:%M")]
         if not fixtures:
             return []
+
+    # 国际比赛日窗口内，桌面首页只有欧国联；再从移动首页补五大联赛，
+    # 追加在国家队赛事后面（页面按 kickoff 排序，联赛 11/21 起自然排最后）。
+    if window:
+        try:
+            msched = _get(MOBILE_SCHEDULE_URL)
+            club = parse_mobile_schedule(msched)
+            have = {x["id"] for x in fixtures}
+            club = [x for x in club if x["id"] not in have]
+            before = len(fixtures)
+            fixtures.extend(club)
+            fixtures.sort(key=lambda x: x["kickoff"])
+            fixtures = fixtures[:INTL_MAX_FIXTURES]
+            print("  国际比赛日：桌面 %d 场国家队 + 移动补 %d 场联赛 = %d 场"
+                  % (before, len(club), len(fixtures)))
+        except Exception as exc:
+            print("  [警告] 移动首页联赛赛程抓取失败，仅保留国家队赛事：%s" % exc)
+    else:
+        fixtures = fixtures[:MAX_FIXTURES]
+
     fixtures = attach_analysis(fixtures)
     fixtures = attach_source_winrate(fixtures)
     # 模型估算单独一层：只写 estimate，绝不碰 winrate（来源站公布的官方数据）

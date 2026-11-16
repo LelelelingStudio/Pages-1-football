@@ -529,7 +529,7 @@
          + (wr ? ' · '+wr+' 场有来源站公布的本场胜率' : ' · 三家来源均未公布本场胜率')
          + estTxt
          + (stamp ? ' · 更新 '+stamp.slice(5,16) : '')
-         + (DATA.international_window ? ' · 国际比赛日：赛程含欧国联等欧洲国家队比赛' : ''))
+         + (DATA.international_window ? ' · 国际比赛日：欧洲国家队赛事 + 五大联赛补充赛程' : ''))
       : '未来 7 天暂无符合范围的比赛；这里如实留空，不拿已结束的比赛凑数';
     var p = $('#uEmpty p');
     if (p) p.textContent = fs.length ? '当前筛选下没有即将开赛的比赛' : '未来 7 天暂无符合范围的比赛';
