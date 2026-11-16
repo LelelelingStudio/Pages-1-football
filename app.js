@@ -1313,9 +1313,6 @@
     var btn = $('#refreshBtn'); btn.classList.add('spin'); btn.disabled = true;
     fetch('news.json', {cache:'no-store'})
       .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
-      .catch(function(){ return fetch('/api/news?refresh=1', {cache:'no-store'})
-                          .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }); })
-      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
       .then(function(d){
         if (!d.items || !d.items.length) throw new Error('返回数据为空');
         DATA = d;
@@ -1327,12 +1324,8 @@
       })
       .catch(function(err){
         var m = String(err && err.message || '');
-        // 线上静态分享版没有 /api/news 接口（404 或直接返回 HTML），给准确说明而不是报错
-        if (/404|405|501|Unexpected token|JSON|SyntaxError|Failed to fetch/i.test(m)) {
-          toast('暂未取到新快照，页面仍是上次成功的数据；新数据每天由 GitHub Actions 同步一次');
-        } else {
-          toast('刷新失败：'+m+'（页面仍显示上次成功的数据）');
-        }
+        // 纯静态分支部署：没有后端接口，只可能取不到 news.json 本身
+        toast('刷新失败：'+m+'（页面仍显示上次成功的数据）');
       })
       .finally(function(){ btn.classList.remove('spin'); btn.disabled=false; });
   });

@@ -1,9 +1,9 @@
 {
-  "owner": "YOUR_GITHUB_USERNAME",
-  "repo": "football-daily",
+  "owner": "LelelelingStudio",
+  "repo": "Pages-1-football",
   "branch": "main",
-  "customDomain": "football.leleleling.site",
-  "dataPath": "data/news.json",
+  "customDomain": "football-pages.leleleling.site",
+  "dataPath": "news.json",
   "statePath": "state/last-publish.json",
-  "note": "公开配置，不含任何密钥。请把 owner / repo / customDomain 改成实际值后提交；admin.html 会自动读取本文件。"
+  "note": "公开配置，不含任何密钥。站点为纯静态分支部署：仓库根目录 index.html 即入口，无需 Actions、无需 token。"
 }

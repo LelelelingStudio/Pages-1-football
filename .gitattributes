@@ -1,0 +1,20 @@
+# 换行符统一：保证 .githooks 里的 sh 脚本在 Windows 上仍是 LF，
+# 否则 git 钩子会报 "bad interpreter: /bin/sh^M"。
+* text=auto
+
+*.sh text eol=lf
+.githooks/pre-push text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.webmanifest text eol=lf
+*.css text eol=lf
+*.svg text eol=lf
+*.md text eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.png binary
+*.jpg binary
+*.ico binary

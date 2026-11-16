@@ -1,0 +1,37 @@
+#!/bin/sh
+# pre-push 钩子：每天只允许推送一次新数据。
+#
+# 这个仓库不用 GitHub Actions（Pages source 设为分支），所以「一天一次」
+# 只能靠本地钩子实现。GitHub Desktop 会执行 git 钩子，钩子失败会阻止推送。
+#
+# 判定逻辑交给 tools/daily_gate.py --check-push：
+# 它比对 origin/main 上的日期戳与本次提交的日期戳（北京时间），
+# 命中「今天已经发过」就返回非 0，推送被拦下。
+#
+# 绕过方式（明知故犯时才用）：
+#     git push --no-verify
+# 但请先读 README 里的说明：这是客户端闸门，不是服务端强制。
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+
+# 只拦 main 分支；其它分支照常推
+case "$BRANCH" in
+  main|master) ;;
+  *) exit 0 ;;
+esac
+
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null || echo ".")
+CHECK="$ROOT/tools/daily_gate.py"
+
+# 检查脚本不在（比如精简过的克隆）就放行，不误杀
+[ -f "$CHECK" ] || exit 0
+
+for c in python python3 py; do
+  if command -v "$c" >/dev/null 2>&1; then
+    "$c" "$CHECK" --check-push
+    exit $?
+  fi
+done
+
+echo "提示：找不到 python，跳过每日闸门检查。"
+exit 0
