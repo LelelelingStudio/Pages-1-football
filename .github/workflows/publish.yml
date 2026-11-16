@@ -1,0 +1,94 @@
+name: 每日数据同步与发布
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/news.json'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '强制执行：紧急修复时绕过每日一次闸门（仅仓库写权限者可用）'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 每日闸门校验（北京时间）
+        id: gate
+        env:
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force == true && '1' || '0' }}
+        run: python scripts/daily_gate.py
+
+      - name: 注入数据并生成站点
+        if: steps.gate.outputs.allowed == 'true'
+        run: python scripts/build_site.py
+
+      - name: 撤销当日重复上传
+        if: steps.gate.outputs.allowed == 'false'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "没有需要回滚的文件"
+          else
+            git commit -m "data: 撤销当日重复上传 ${{ steps.gate.outputs.today }}"
+            git push
+          fi
+
+      - name: 配置 Pages
+        if: steps.gate.outputs.allowed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: 上传站点产物
+        if: steps.gate.outputs.allowed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: 部署到 GitHub Pages
+        if: steps.gate.outputs.allowed == 'true'
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: 部署成功后写入日期戳并提交
+        if: steps.gate.outputs.allowed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "没有需要提交的文件"
+          else
+            git commit -m "data: 发布每日快照 ${{ steps.gate.outputs.today }}"
+            git push
+          fi
+
+      - name: 当日重复上传，标记失败
+        if: steps.gate.outputs.allowed == 'false'
+        run: |
+          echo "::error::今天（${{ steps.gate.outputs.today }}）已经发布过一次，本次上传已撤销，站点内容未变。"
+          exit 1

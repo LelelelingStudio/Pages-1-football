@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>今日球报 · 数据上传管理</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --card:#ffffff; --text:#1b1d21; --muted:#6b7280;
+    --line:#e2e5e9; --accent:#c8342c; --link:#185fa5; --ok:#0f6e56; --err:#a32d2d;
+    --soft:#f7f8fa; --code:#f0f2f5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#15171b; --card:#1e2126; --text:#eceef1; --muted:#9aa1ab;
+      --line:#343a42; --accent:#e2645a; --link:#78b6f2; --ok:#5dcaa5; --err:#f09595;
+      --soft:#23272e; --code:#2a2f37;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:14px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+  .wrap{max-width:820px;margin:0 auto;padding:28px 18px 60px}
+  header{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .mark{width:34px;height:34px;border-radius:9px;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:500;flex:none}
+  h1{font-size:19px;font-weight:500;margin:0}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 20px 46px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin-bottom:16px}
+  h2{font-size:14px;font-weight:500;margin:0 0 14px;display:flex;align-items:center;gap:9px}
+  .num{width:21px;height:21px;border-radius:6px;background:var(--soft);border:1px solid var(--line);
+    font-size:12px;display:flex;align-items:center;justify-content:center;color:var(--muted);flex:none}
+  .warning{border:1px solid var(--line);border-left:3px solid var(--accent);
+    background:var(--soft);border-radius:8px;padding:13px 16px;margin-bottom:18px;
+    font-size:13px;color:var(--muted)}
+  .warning b{color:var(--text);font-weight:500}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}
+  input[type=text],input[type=password],textarea{
+    width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;
+    background:var(--soft);color:var(--text);font:13px/1.5 inherit;outline:none}
+  input:focus,textarea:focus{border-color:var(--link)}
+  textarea{min-height:104px;resize:vertical;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+  .row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:10px}
+  button{border:1px solid var(--line);background:var(--soft);color:var(--text);
+    border-radius:8px;padding:8px 14px;font:13px inherit;cursor:pointer}
+  button:hover:not(:disabled){border-color:var(--link)}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:500}
+  button.primary:hover:not(:disabled){filter:brightness(1.08)}
+  .hint{font-size:12px;color:var(--muted);margin-top:9px}
+  .state{border-radius:8px;padding:11px 13px;font-size:13px;margin-bottom:13px;
+    background:var(--soft);border:1px solid var(--line)}
+  .state.ok{border-color:var(--ok)} .state.bad{border-color:var(--err)}
+  .preview{font-size:13px;margin-top:10px;color:var(--muted)}
+  #log{margin-top:14px;font-size:12.5px;max-height:220px;overflow:auto}
+  #log .line{padding:7px 10px;border-radius:6px;background:var(--soft);margin-bottom:6px;
+    word-break:break-word;white-space:pre-wrap}
+  #log .line.err{color:var(--err)} #log .line.ok{color:var(--ok)}
+  a{color:var(--link)}
+  .foot{font-size:12px;color:var(--muted);margin-top:20px;line-height:1.8}
+  code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="mark">球</div><h1>今日球报 · 数据上传管理</h1></header>
+  <p class="sub">每天上传一次站点数据快照，GitHub Actions 负责校验、注入并发布。</p>
+
+  <div class="warning">
+    <b>请先看这条：</b>本页部署在 public 仓库，任何人都能打开它，但<b>没有 Token 无法上传</b>。
+    Token 只保存在当前浏览器标签页的会话里，<b>不会写进仓库任何文件、不会发给除 api.github.com 以外的服务</b>；
+    关闭标签页即清除。本页不加载任何第三方脚本、字体或统计。
+    千万不要把 Token 贴进 JSON、提交信息或截图转发 —— GitHub 会扫描公开仓库并自动吊销泄露的凭据。
+  </div>
+
+  <div class="card">
+    <h2><span class="num">1</span>仓库与凭据</h2>
+    <div class="grid">
+      <div><label for="owner">仓库所有者（owner）</label><input id="owner" type="text" autocomplete="off" spellcheck="false"></div>
+      <div><label for="repo">仓库名（repo）</label><input id="repo" type="text" autocomplete="off" spellcheck="false"></div>
+      <div><label for="branch">分支</label><input id="branch" type="text" autocomplete="off" spellcheck="false"></div>
+      <div><label for="token">GitHub Token</label><input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></div>
+    </div>
+    <div class="row">
+      <button id="toggle" type="button">显示 Token</button>
+      <button id="clear" type="button">清除本机凭据</button>
+      <button id="recheck" type="button">重新检查今日状态</button>
+    </div>
+    <div class="hint">owner / repo / branch 优先读取同目录的 <code>config.json</code>，这里可以临时覆盖；只存在本次会话。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">2</span>选择数据文件</h2>
+    <input id="file" type="file" accept=".json,application/json">
+    <div class="hint">也可以直接把 <code>news.json</code> 的内容粘贴到下面：</div>
+    <textarea id="raw" placeholder="粘贴完整的站点数据 JSON（必须含非空 items 数组）" spellcheck="false"></textarea>
+    <div class="preview" id="preview">尚未选择数据。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">3</span>上传并发布</h2>
+    <div class="state" id="gate">正在检查今日发布状态…</div>
+    <button id="go" class="primary" type="button" disabled>上传到仓库</button>
+    <div class="hint" id="goHint">请先填好仓库、Token 并选择有效数据。</div>
+    <div id="log" aria-live="polite"></div>
+  </div>
+
+  <div class="foot" id="foot">
+    真正的「每天一次」由仓库里的 <code>publish.yml</code> 判定（按北京时间），
+    本页的锁定只是提前提示；即使绕过本页直接调 API，第二次上传也会被 workflow 撤销。
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var DEFAULT = {
+    owner:'YOUR_GITHUB_USERNAME', repo:'football-daily', branch:'main',
+    dataPath:'data/news.json', statePath:'state/last-publish.json',
+    customDomain:'football.leleleling.site'
+  };
+  var CFG = DEFAULT;
+  var S = { valid:false, raw:'', locked:false, busy:false, today:'' };
+
+  function $(id){ return document.getElementById(id); }
+  function todayBJ(){ return new Date(Date.now() + 8*3600*1000).toISOString().slice(0,10); }
+  function skey(k){ return 'qb_admin_' + k; }
+  function sget(k,d){ try{ return sessionStorage.getItem(skey(k)) || d; }catch(e){ return d; } }
+  function sset(k,v){ try{ sessionStorage.setItem(skey(k),v); }catch(e){} }
+  function sdel(k){ try{ sessionStorage.removeItem(skey(k)); }catch(e){} }
+  function safe(v,slash){
+    if(!v) return false;
+    if(/^[A-Za-z0-9_.-]+$/.test(v)) return true;
+    return !!slash && /^[A-Za-z0-9_.\-\/]+$/.test(v);
+  }
+  function log(msg,kind){
+    var d = document.createElement('div');
+    d.className = 'line' + (kind ? ' '+kind : '');
+    d.textContent = msg;
+    $('log').appendChild(d);
+    $('log').scrollTop = $('log').scrollHeight;
+  }
+  function apiBase(){
+    var o = $('owner').value.trim(), r = $('repo').value.trim();
+    return 'https://api.github.com/repos/' + encodeURIComponent(o) + '/' + encodeURIComponent(r);
+  }
+  function headers(tok){
+    return {
+      'Accept':'application/vnd.github+json',
+      'Authorization':'Bearer ' + tok,
+      'X-GitHub-Api-Version':'2022-11-28'
+    };
+  }
+  function toBase64(str){
+    var bytes = new TextEncoder().encode(str), bin = '', CH = 0x8000, i;
+    for(i=0;i<bytes.length;i+=CH){
+      bin += String.fromCharCode.apply(null, bytes.subarray(i, i+CH));
+    }
+    return btoa(bin);
+  }
+  function fromBase64(b64){
+    var bin = atob(String(b64).replace(/\s/g,'')), bytes = new Uint8Array(bin.length), i;
+    for(i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder('utf-8').decode(bytes);
+  }
+  function updateButton(){
+    var ok = !S.locked && !S.busy && S.valid && !!$('token').value.trim() &&
+             safe($('owner').value.trim()) && safe($('repo').value.trim()) &&
+             safe($('branch').value.trim(), true);
+    $('go').disabled = !ok;
+    if(S.locked) $('goHint').textContent = '今天已经发布过一次，按钮已锁定；北京时间次日 00:00 自动解锁。';
+    else if(S.busy) $('goHint').textContent = '正在上传，请稍候…';
+    else if(!ok) $('goHint').textContent = '请先填好仓库、Token 并选择一份有效的站点数据 JSON。';
+    else $('goHint').textContent = '就绪：本次上传会触发 GitHub Actions，约 1–2 分钟后站点更新。';
+  }
+  function setState(text, kind){
+    var el = $('gate');
+    el.className = 'state' + (kind ? ' '+kind : '');
+    el.textContent = text;
+  }
+  function validate(raw){
+    S.raw = raw || '';
+    S.valid = false;
+    if(!S.raw.trim()){
+      $('preview').textContent = '尚未选择数据。';
+      updateButton(); return;
+    }
+    var d;
+    try{ d = JSON.parse(S.raw); }
+    catch(e){ $('preview').textContent = 'JSON 解析失败：' + e.message; updateButton(); return; }
+    if(!d || !Array.isArray(d.items) || !d.items.length){
+      $('preview').textContent = '校验失败：需要含非空 items 数组的完整站点快照。';
+      updateButton(); return;
+    }
+    S.valid = true;
+    $('preview').textContent = '校验通过 · 资讯 ' + d.items.length + ' 条 · 集锦/赛果 '
+      + ((d.highlights||[]).length) + ' 条 · 即将开赛 ' + ((d.upcoming||[]).length)
+      + ' 场 · 快照时间 ' + (d.updated_at || '未标注')
+      + ' · ' + (new Blob([S.raw]).size/1024).toFixed(0) + ' KB';
+    updateButton();
+  }
+  function fill(){
+    $('owner').value  = sget('owner',  CFG.owner);
+    $('repo').value   = sget('repo',   CFG.repo);
+    $('branch').value = sget('branch', CFG.branch);
+    $('token').value  = sget('token','');
+    ['owner','repo','branch','token'].forEach(function(id){
+      $(id).addEventListener('input', function(){
+        sset(id, $(id).value);
+        updateButton();
+        // 粘贴 Token 后要重新查一次：无 Token 时走的是公开 raw（可能有 CDN 缓存），
+        // 带 Token 走 API 才准确；闸门最终仍以 workflow 为准
+        checkGate();
+      });
+    });
+    if(CFG.customDomain){
+      var a = document.createElement('a');
+      a.href = 'https://' + CFG.customDomain + '/';
+      a.textContent = '打开线上站点';
+      a.style.marginLeft = '8px';
+      $('foot').appendChild(a);
+    }
+    checkGate();
+  }
+  function readState(){
+    var tok = $('token').value.trim(), o = $('owner').value.trim(),
+        r = $('repo').value.trim(), b = $('branch').value.trim();
+    if(tok){
+      return fetch(apiBase() + '/contents/' + CFG.statePath +
+                   '?ref=' + encodeURIComponent(b) + '&t=' + Date.now(),
+                   {headers:headers(tok), cache:'no-store'})
+        .then(function(res){
+          if(res.status === 401 || res.status === 403)
+            throw new Error('Token 无效或权限不足');
+          return res.ok ? res.json() : null;
+        })
+        .then(function(j){
+          if(!j || !j.content) return null;
+          try{ return JSON.parse(fromBase64(j.content)); }catch(e){ return null; }
+        });
+    }
+    var raw = 'https://raw.githubusercontent.com/' + o + '/' + r + '/' + b +
+              '/' + CFG.statePath + '?t=' + Date.now();
+    return fetch(raw, {cache:'no-store'})
+      .then(function(res){ return res.ok ? res.json() : null; })
+      .catch(function(){ return null; });
+  }
+  function checkGate(){
+    S.today = todayBJ();
+    var o = $('owner').value.trim(), r = $('repo').value.trim();
+    if(!safe(o) || !safe(r) || o.indexOf('YOUR_') === 0){
+      setState('请先在 config.json 或上方填写真实的仓库 owner / repo。', 'bad');
+      S.locked = true; updateButton(); return;
+    }
+    setState('正在读取今日发布状态…');
+    readState().then(function(st){
+      var last = (st && st.date) || '';
+      if(last === S.today){
+        S.locked = true;
+        setState('今天（' + S.today + '）已经发布过一次 → 上传已锁定，站点内容保持不变。', 'bad');
+      }else{
+        S.locked = false;
+        setState('今天（' + S.today + '）尚未发布 → 可以上传一次。上次发布：' + (last || '无记录') + '。', 'ok');
+      }
+      updateButton();
+    }).catch(function(e){
+      var msg = (e && e.message) || '';
+      if(/Token/.test(msg)){
+        S.locked = true;
+        setState('Token 校验失败：' + msg + '。请确认仓库选对了、且 Token 有 Contents 读写权限。', 'bad');
+      }else{
+        S.locked = false;
+        setState('暂时读不到发布状态（仓库可能刚创建）。仍可上传，最终以 GitHub Actions 的闸门为准。');
+      }
+      updateButton();
+    });
+  }
+  function upload(){
+    var tok = $('token').value.trim(), b = $('branch').value.trim();
+    if(!tok){ log('请先填写 GitHub Token。','err'); return; }
+    if(!S.valid){ log('数据未通过校验。','err'); return; }
+    S.busy = true; updateButton();
+    var d;
+    try{ d = JSON.parse(S.raw); }catch(e){ log('JSON 解析失败：'+e.message,'err'); S.busy=false; updateButton(); return; }
+    var url = apiBase() + '/contents/' + CFG.dataPath;
+    log('正在读取仓库中现有数据文件…');
+    fetch(url + '?ref=' + encodeURIComponent(b) + '&t=' + Date.now(),
+          {headers:headers(tok), cache:'no-store'})
+      .then(function(res){
+        if(res.status === 404) return null;
+        if(!res.ok) throw new Error('读取失败 HTTP ' + res.status + ' ' + (res.status===401?'（Token 无效或已过期）':''));
+        return res.json();
+      })
+      .then(function(cur){
+        var body = {
+          message: 'data: 上传每日快照 ' + S.today,
+          content: toBase64(JSON.stringify(d)),
+          branch: b
+        };
+        if(cur && cur.sha) body.sha = cur.sha;
+        log('正在提交到 ' + CFG.dataPath + ' …');
+        return fetch(url, {
+          method:'PUT',
+          headers: Object.assign({}, headers(tok), {'Content-Type':'application/json'}),
+          body: JSON.stringify(body)
+        }).then(function(res){
+          return res.json().then(function(j){ return {ok:res.ok, status:res.status, j:j}; });
+        });
+      })
+      .then(function(res){
+        if(!res.ok){
+          var msg = res.j && res.j.message ? res.j.message : '';
+          throw new Error('HTTP ' + res.status + ' ' + msg +
+            (res.status === 403 ? '（检查 Token 是否有 Contents 写权限）' : ''));
+        }
+        sset('token', tok);
+        var sha = (res.j.commit && res.j.commit.sha || '').slice(0,8);
+        log('上传成功，commit ' + sha + '。GitHub Actions 正在校验并发布，约 1–2 分钟后生效。','ok');
+        var o = $('owner').value.trim(), r = $('repo').value.trim();
+        var link = document.createElement('a');
+        link.href = 'https://github.com/' + o + '/' + r + '/actions/workflows/publish.yml';
+        link.textContent = '查看 Actions 运行日志';
+        var box = document.createElement('div');
+        box.className = 'line ok';
+        box.appendChild(link);
+        $('log').appendChild(box);
+        S.locked = true; S.busy = false;
+        setState('本次上传已提交。今天（' + S.today + '）的额度已用完，按钮锁定。', 'ok');
+        updateButton();
+      })
+      .catch(function(e){
+        log('上传失败：' + (e && e.message || e) + '。仓库数据未被修改。','err');
+        S.busy = false; updateButton();
+      });
+  }
+
+  $('file').addEventListener('change', function(e){
+    var f = e.target.files && e.target.files[0];
+    if(!f) return;
+    var rd = new FileReader();
+    rd.onload = function(){ $('raw').value = String(rd.result); validate(String(rd.result)); };
+    rd.onerror = function(){ log('文件读取失败。','err'); };
+    rd.readAsText(f, 'utf-8');
+  });
+  $('raw').addEventListener('input', function(){ validate($('raw').value); });
+  $('toggle').addEventListener('click', function(){
+    var t = $('token');
+    var show = t.type === 'password';
+    t.type = show ? 'text' : 'password';
+    $('toggle').textContent = show ? '隐藏 Token' : '显示 Token';
+  });
+  $('clear').addEventListener('click', function(){
+    ['owner','repo','branch','token'].forEach(sdel);
+    $('token').value = '';
+    log('已清除本机会话中的凭据。','ok');
+    updateButton();
+  });
+  $('recheck').addEventListener('click', function(){ log('重新检查今日状态…'); checkGate(); });
+  $('go').addEventListener('click', upload);
+
+  fetch('config.json', {cache:'no-store'})
+    .then(function(res){ return res.ok ? res.json() : null; })
+    .then(function(c){
+      if(c && typeof c === 'object'){
+        CFG = Object.assign({}, DEFAULT, c);
+      }
+      fill();
+    })
+    .catch(fill);
+})();
+</script>
+</body>
+</html>
