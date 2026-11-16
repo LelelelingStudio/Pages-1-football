@@ -18,8 +18,10 @@
   ensure_proxy() 会先探测，不通就尝试拉起内核；都不行才如实报错。
 * 失败重试：即使数据已是最新，只要本地还有未推送的提交（上次 push
   失败攒下的），本脚本仍会尝试推送，不会因「数据没变」而永远跳过。
-* 一天一次：「一天最多一次 push」由 .githooks/pre-push 闸门保证。
-  当天已推过时 push 被拦，脚本记为 deferred 并正常退出，不算失败；
+* 推送次数：当前每天可 push 任意次（闸门总开关
+  tools/daily_gate.py 的 ENABLE_DAILY_LIMIT = False）。
+  若以后把开关改回 True 恢复「一天一次」，当天已推过时 push 会被
+  pre-push 拦下，脚本记为 deferred 并正常退出，不算失败；
   第二天闸门放行后自动把攒下的更新推上去。
 
 用法

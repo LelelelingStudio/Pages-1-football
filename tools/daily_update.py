@@ -4,24 +4,23 @@
 用法（在仓库根目录）：
     python tools/daily_update.py            # 抓取 + 构建 + 提交（不推送）
     python tools/daily_update.py --push     # 再推送到 origin/main
-    python tools/daily_update.py --force    # 忽略每日闸门（应急重发）
+    python tools/daily_update.py --force    # 跳过闸门 --no-verify（恢复限制后才用得上）
     python tools/daily_update.py --skip-fetch   # 不重新抓取，只重建 + 提交
 
 流程说明
 --------
 1. 调抓取管线，生成 news.json 并注入 index.html
 2. 重建自包含离线单文件 offline.html
-3. 跑每日闸门（只读）：今天已发布过就拒绝，除非 --force
-4. git add + commit（日期戳由 .githooks/pre-commit 自动盖）
-5. git push origin main（pre-push 钩子会再核一次闸门）
+3. 跑发布闸门（只读）：当前每天可推任意次，一律放行；恢复限制后才按天拦截
+4. git add + commit（日期戳由 .githooks/pre-commit 自动盖，历史可查）
+5. git push origin main（pre-push 钩子会再核一次闸门，当前直接放行）
 
 关于顺序的两个细节
 ------------------
-* 闸门在推送之前：先确认「今天还没发过」，再允许把新数据推上去。
+* 闸门在推送之前（恢复限制后才会真的拦）：先确认「今天还没发过」，
+  再允许把新数据推上去。当前开关关闭，这一步只是留痕。
 * 推送失败不用回滚日期戳：日期戳是**提交**时盖的，不是推送时写的。
-  提交里带着今天的戳，但远端还没收到这次提交 —— 下次重推会带上这个提交，
-  远端历史里才第一次出现今天的戳。pre-push 判据看的是**远端历史**，
-  所以推送失败后当天仍然可以重试。
+  恢复限制后，pre-push 判据看的是**远端历史**，所以推送失败后当天仍可重试。
 """
 import argparse
 import io
@@ -61,13 +60,17 @@ def rebuild_offline():
 
 
 def gate(force):
-    """只读检查今天的发布资格。判定与 pre-push 钩子完全一致。"""
-    print("[3/5] 检查每日闸门 ...")
+    """只读检查发布资格。判定与 pre-push 钩子完全一致。
+
+    当前闸门总开关 ENABLE_DAILY_LIMIT=False，每次都放行；
+    若以后改回 True 恢复「一天一次」，这里才会拒绝当天二次发布。
+    """
+    print("[3/5] 检查发布闸门 ...")
     allowed, reason = daily_gate.check_push(force=force)
     print("      %s（%s）" % ("允许发布" if allowed else "拒绝发布", reason))
     if not allowed:
         raise SystemExit(
-            "今天已经发布过一次了。强制重发请加 --force "
+            "闸门恢复了「一天一次」限制，今天已经发布过。强制重发请加 --force "
             "（或直接 git push --no-verify）。")
     return reason
 

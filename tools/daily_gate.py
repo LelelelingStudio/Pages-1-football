@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
-"""每日一次发布闸门（客户端侧）。
+"""发布闸门（客户端侧）。
+
+当前状态（2026-11-16 起）
+--------------------------
+总开关 ENABLE_DAILY_LIMIT = False：**每天可推送任意次**，闸门不拦截。
+`--stamp-commit` 照常在每次提交时盖北京日期戳（历史可查、数据同步判断新旧），
+`--check-push` 则一律放行。把开关改成 True 即恢复下面的「一天一次」规则。
 
 背景
 ----
 本仓库**不使用 GitHub Actions**（用户明确要求：免费额度撑不住，
-Pages 的 source 设为分支而非 Actions）。因此「一天只能发布一次」没有
-服务端强制力，只能靠本地 git 钩子实现。
+Pages 的 source 设为分支而非 Actions）。因此即便恢复「一天只能发布一次」，
+也没有服务端强制力，只能靠本地 git 钩子实现。以下规则仅在开关为 True 时生效。
 
 核心设计：让**每一次提交都自动盖上「北京日期」戳**，而不是依赖某个
 脚本记得去写。这样不管用 GitHub Desktop 点「Push origin」、命令行
@@ -61,6 +67,14 @@ ROOT = os.path.dirname(HERE)
 STATE = os.path.join(ROOT, "state", "last-publish.json")
 LOG = os.path.join(ROOT, "state", "last-rejected.json")
 STATE_REL = "state/last-publish.json"
+
+# ---------------------------------------------------------------- 总开关
+# 用户 2026-11-16 改为「每天可 push 无限次」。
+# False = 闸门停用，pre-push 每次都放行（当前设置）；
+# True  = 恢复「一天最多一次发布」，按下面的远端戳 / 本机记录判定。
+# pre-commit 的日期戳照盖不误（历史可查、sync_and_publish 也用它判断数据新旧），
+# 只是不再用它拦截推送。想恢复一天一次，把这一行改成 True 即可，其余不用动。
+ENABLE_DAILY_LIMIT = False
 
 
 # ---------------------------------------------------------------- 基础工具
@@ -297,6 +311,9 @@ def remote_stamp_dates(limit=20):
 def check_push(today=None, force=False):
     """pre-push 用的判定：今天是否已经推送过。返回 (allowed, reason)。"""
     today = today or beijing_today()
+
+    if not ENABLE_DAILY_LIMIT:
+        return True, "每日闸门已停用：每天可推送任意次（如需恢复，把 ENABLE_DAILY_LIMIT 改为 True）"
 
     if force:
         return True, "force：已忽略每日闸门"

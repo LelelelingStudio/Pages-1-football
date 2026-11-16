@@ -4,7 +4,7 @@ rem  今日球报 - 首次配置（换机器 / 第一次 clone 后跑一次）
 rem
 rem  做的事：
 rem    1. 设置 core.hooksPath = .githooks
-rem       （让 Git 知道钩子目录在哪，「一天只推一次」的闸门才会生效）
+rem       （让 Git 知道钩子目录在哪；当前每天可推任意次，钩子只负责盖日期戳）
 rem    2. 确认仓库地址指向正确的远端
 rem    3. 跑一次闸门自检
 rem
@@ -50,8 +50,7 @@ echo      完成。
 
 rem --- 4. 自检 ---
 echo.
-echo [4/4] 闸门自检 ...
-echo      正在检查「今天是否已经发布过」...
+echo [4/4] 发布闸门自检 ...
 python tools\daily_gate.py --check-push 2>&1 | findstr /v "^$"
 echo.
 
@@ -60,8 +59,9 @@ echo  配置完成。
 echo.
 echo  接下来：
 echo    - 用 GitHub Desktop 打开这个仓库，日常更新照旧
-echo    - 每天只会被允许推送一次，第二次会被拦下（这是设计如此）
-echo    - 真需要强制重发时：git push --no-verify
+echo    - 每天可推送任意次，没有次数限制
+echo    - 想恢复「一天一次」：把 tools/daily_gate.py 顶部
+echo      ENABLE_DAILY_LIMIT 改成 True 即可
 echo ============================================
 echo.
 pause
