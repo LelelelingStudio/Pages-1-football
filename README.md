@@ -20,14 +20,23 @@
 | 账号类型 | 个人账号（非组织） |
 | 主页 | https://leleleling.site |
 
-> 如果你手上还没有这个账号：**先到 https://github.com/signup 注册一个**，
-> 注册时的用户名建议就用 `LelelelingStudio`（仓库已经建在这个账号下，
-> 换名字的话仓库得转移，会多一道手续）。
-> 注册时需要邮箱验证，用你自己的邮箱即可。
+> **三种账号情况，对应三条路：**
 >
-> 拿到账号后告诉仓库所有者，让他把你加成 collaborator：
-> 仓库页面 → **Settings → Collaborators → Add people** → 填你的 GitHub 用户名。
-> 角色选 **Write** 就够了（能推分支、能开 Pages 设置）。
+> **情况 A —— 你是 `LelelelingStudio` 本人**（仓库就建在这个账号下）：
+> 直接用这个账号登录即可，推送、Pages 设置、自定义域名全都能做，无需任何人授权。
+>
+> **情况 B —— 你有 `LelelelingStudio` 的账号密码，但不是同一个人**：
+> 让账号主人把仓库权限给你，或直接把账号密码给你代登录。
+>
+> **情况 C —— 你还没有 GitHub 账号**：
+> 1. 到 https://github.com/signup 注册一个（需要邮箱验证）；
+> 2. 让 `LelelelingStudio` 账号（仓库所有者）把你加为 collaborator：
+>    仓库页面 → **Settings → Collaborators → Add people** → 填你的 GitHub 用户名，
+>    角色选 **Write** 就够了（能推分支、能开 Pages 设置）；
+> 3. 用新账号登录 GitHub Desktop 即可。
+>
+> 三种情况都不需要 Personal Access Token —— GitHub Desktop 和
+> Git Credential Manager 都是浏览器授权登录。
 
 ### 2. 安装 GitHub Desktop
 
