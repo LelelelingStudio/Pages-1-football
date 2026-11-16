@@ -2,7 +2,7 @@
    策略：同源 HTML / JS 走「网络优先」保证每次打开都是最新快照，离线回退缓存；
    跨域的图片 / 视频（新闻配图、爱奇艺官方入口）完全不拦截，交给浏览器。
    前端改版时把 VERSION 加一号，activate 会自动清掉旧缓存。 */
-var VERSION = 'qiubao-gh-v1';
+var VERSION = 'qiubao-gh-v2';
 var START = './index.html';
 var SHELL = [START, './app.js', './manifest.webmanifest', './icon-192.png', './icon.png'];
 

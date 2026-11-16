@@ -1,5 +1,5 @@
 {
   "date": "",
   "note": "每次发布成功后写入北京日期（UTC+8）。pre-push 钩子据此拦截当天第二次推送。本仓库无 workflow，纯客户端闸门。",
-  "updated_at": "2026-11-16T09:33:15"
+  "updated_at": ""
 }

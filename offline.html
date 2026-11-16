@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="NGkguy5kKAeo1XoZTJEmzh">
 <meta name="referrer" content="no-referrer" data-page-node-id="TOB2NpFJC2xFkiOowgccnd">
 <!-- 前端版本标记：sync_online.py 用它判断页面代码是否比线上新，改前端时请顺手更新 -->
-<meta name="wb-build" content="install-popup-20261115184500" data-page-node-id="D5PRfHS4AO4eNfv2hXBRrA">
+<meta name="wb-build" content="ghpages-20261115200200" data-page-node-id="D5PRfHS4AO4eNfv2hXBRrA">
 <meta name="description" content="今日球报：每日 50 条足球要闻，另有「赛果集锦」区（官方完整集锦）与「正赛赛果」区（按 8 天滚动窗口收录比赛，每天自动淘汰最旧一天；平时收五大联赛 / 欧冠，国际比赛日窗口内两个区域全部换成欧洲国家队比赛；窗口结束后国际比赛日的比赛与此前的联赛集锦 / 赛果都不再展示、不回灌，只收窗口后新打的联赛赛果），另有「即将开赛」区（未来 7 天赛程与真实赛前分析；三家来源均未公布本场胜率时不展示该区块）。站内直接阅读。支持全站搜索、赛事收纳柜与收藏。" data-page-node-id="G6rc76EK0hDwA0fMHSARiP">
 <meta name="keywords" content="今日球报,足球新闻,比赛集锦,进球视频,英超,西甲,意甲,德甲,法甲,欧冠,五大联赛,足球资讯" data-page-node-id="ybCMaDS7RhGjikGfmjuk4m">
 <meta name="author" content="今日要闻" data-page-node-id="ifbAKGPgavvkOuxx71EbNT">
@@ -2107,23 +2107,21 @@
       return;
     }
     var btn = $('#refreshBtn'); btn.classList.add('spin'); btn.disabled = true;
-    fetch('/api/news?refresh=1', {cache:'no-store'})
+    fetch('news.json', {cache:'no-store'})
       .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
       .then(function(d){
         if (!d.items || !d.items.length) throw new Error('返回数据为空');
-        DATA = d; renderHeader(); render();
+        DATA = d;
+        try { applyRollingWindow(); applyInternationalMode(); } catch (e) {}
+        renderHeader(); render();
         if (state.cur || state.matchId || state.fixtureId) renderReader();
-        $('#sMode').innerHTML = '<i></i>实时抓取';
-        toast('已抓取最新 '+d.items.length+' 条 · '+d.updated_at);
+        $('#sMode').innerHTML = '<i></i>最新快照';
+        toast('已载入最新 '+d.items.length+' 条 · '+d.updated_at);
       })
       .catch(function(err){
         var m = String(err && err.message || '');
-        // 线上静态分享版没有 /api/news 接口（404 或直接返回 HTML），给准确说明而不是报错
-        if (/404|405|501|Unexpected token|JSON|SyntaxError/i.test(m)) {
-          toast('线上是静态快照，内容每天自动同步；实时抓取请在本地运行「启动网站.bat」后再点刷新');
-        } else {
-          toast('刷新失败：'+m+'（页面仍显示上次成功的数据）');
-        }
+        // 纯静态分支部署：没有后端接口，只可能取不到 news.json 本身
+        toast('刷新失败：'+m+'（页面仍显示上次成功的数据）');
       })
       .finally(function(){ btn.classList.remove('spin'); btn.disabled=false; });
   });
